@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <script type="text/javascript" src="js/jquery-2.2.0.min.js"></script>
   <script type="text/javascript" src="js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="js/script.js"></script>
   <link rel="stylesheet" href="css/bootstrap.min.css">
   <link rel="stylesheet" href="css/zip-style.css">
 </head>
@@ -56,39 +57,23 @@
     <div class="row main-content">
       <div class="col-sm-3">
         <ul class="main-content-menu">
-          <li><a href="#" class="active-menu">Profile</a></li>
+          <li><a href="#">Profile</a></li>
           <li><a href="#">Corporate Pass</a></li>
           <li><a href="#">Tracking</a></li>
-          <li><a href="#">History</a></li>
+          <li><a href="#" class="active-menu">History</a></li>
           <li><a href="#">Log Out</a></li>
         </ul>
       </div>
       <div class="col-sm-9 col-md-7">
-        <table class="profile-table">
-          <tr>
-            <td class="avatar-cell">
-              <img src="img/user-avatar.png" alt="User Avatar" class="default-avatar">
-            </td>
-            <td class="profile-info">
-              <p class="profile-edit"><a href="#">Edit</a></p>
-              <div class="profile-inputs">
-                <p><input type="text" value="Damoh Parambil"></p>
-                <p><input type="email" placeholder="damoh122131@zipgo.in" class="profile-email"></p>
-                <p><p><input type="password" value="11111" class="profile-password"></p>
-                <p><input type="phone" value="Damoh Parambil" class="profile-phone"></p>
-                <div class="dropdown profile-city">
-                  <button class="btn btn-default dropdown-toggle" type="button" id="menu1" data-toggle="dropdown">Bangalore
-                  <span class="caret"></span></button>
-                  <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
-                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Bangalore Bangalore Bangalore Bangalore</a></li>
-                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Bangalore</a></li>
-                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Bangalore</a></li>
-                  </ul>
-                </div>
-              </div>              
-            </td>
-          </tr>
-        </table>
+        <h5>My Ride</h5>
+        <label class="ride-block">
+          <p>Ref: 1259297</p>
+          <p>16/feb/2016@12.49PM</p>
+          <ul class="ride-route">
+            <li class="ride-route-from"><div class="route-from-text">Reliance Fresh/ MICO Layout, BTM 2nd Stage Reliance Fresh/ MICO Layout, BTM 2nd Stage Reliance Fresh/ MICO Layout, BTM 2nd Stage</div></li>
+            <li class="ride-route-to"><div class="route-to-text">ITPL Main Gate ITPL Main Gate Reliance Fresh/ MICO Layout, BTM 2nd Stage Reliance Fresh/ MICO Layout, BTM 2nd Stage Reliance Fresh/ MICO Layout, BTM 2nd Stage Reliance Fresh/ MICO Layout, BTM 2nd Stage</div><div class="ride-route-status">FINISHED</div></li>
+          </ul>
+        </label>
       </div>
       <div class="col-sm-3 hidden-sm">
       </div>

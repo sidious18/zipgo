@@ -283,6 +283,63 @@ body
 	float:right;
 	margin-top:-12px;
 }
+.ride-block{
+	width:80%;
+}
+.ride-route{
+	padding:0px;
+}
+
+.ride-route-from:before{
+	background: url(../img/from-to.png) no-repeat;
+	padding-left: 25px;
+	content: "";
+	width: 30px;
+	height: 23px;
+	display: inline-block;
+	float: left;
+	margin-top: -4px;
+	background-position: 0px -3px;
+}
+.ride-route-to:before{
+	background: url(../img/from-to.png) no-repeat;
+    padding-left: 25px;
+    content: "";
+    width: 30px;
+    height: 23px;
+    display: inline-block;
+    float: left;
+    background-position: 0px -53px;
+}
+.ride-route li{
+	list-style-type: none;
+}
+.ride-route-from ,.ride-route-to{
+	color:  #737373;
+	font-size: 15px;
+	font-weight: normal;
+}
+.ride-route-to{
+	position:relative;
+}
+.ride-route-status{
+	position: absolute;
+	top:0px;
+	right:0px;
+	text-align: right;
+	font-weight: bold;
+	color:black;
+}
+.route-to-text{
+	padding-right:90px;
+	padding-left: 30px;
+}
+.route-from-text{
+	padding-left: 30px;
+	padding-bottom: 20px;
+	background: url(../img/grey-stick.jpg) repeat-y;
+	background-position: 14px 0px;
+}
 @media(max-width:1920px)
 {
 	.navigation
