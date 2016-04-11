@@ -215,6 +215,73 @@ body
 .pass-content{
 	width:85%;
 }
+.default-avatar{
+	border-radius: 50%;
+	background: #ccc;
+}
+.profile-table{
+	width:75%;
+}
+.profile-table tr td{
+	vertical-align: top;
+}
+.avatar-cell{
+	width:22%;
+}
+.avatar-cell img{
+	width:100%;
+}
+.profile-info{
+	padding-left: 2%;
+}
+.profile-edit{
+	text-align: right;
+}
+.profile-edit a{
+	border-bottom: 1px dotted #ccc;
+	color:  #4d4c4c !important;
+}
+.profile-edit a{
+	text-decoration: none !important;
+}
+.profile-inputs input{
+	border:none;
+	border-bottom:1px solid rgba(185, 185, 185, 0.4);
+	margin:0px 0px 8px;
+	width:100%;
+	padding: 5px 0px 5px 30px;
+}
+.profile-inputs p:first-child input{
+	margin:55px 0px 20px;
+}
+.profile-email{
+	background: url(../img/mail.png) no-repeat;
+	background-position: 0px 6px;
+}
+.profile-password{
+	background: url(../img/lock.png) no-repeat;
+	background-position: 0px 2px;
+}
+.profile-phone{
+	background: url(../img/phone.png) no-repeat; 
+	background-position: 0px 8px;
+}
+.profile-city button{
+	width:100%;
+	border: none;
+	text-align: left;
+	border-bottom:1px solid rgba(185, 185, 185, 0.4) !important;
+	background-color:inherit !important;
+	background:url(../img/marker.png);
+	padding: 5px 0px 5px 30px;
+}
+.profile-city button .caret{
+	border-top: 8px solid !important;
+	border-right: 6px solid transparent !important;
+	border-left: 6px solid transparent !important;
+	float:right;
+	margin-top:-12px;
+}
 @media(max-width:1920px)
 {
 	.navigation
