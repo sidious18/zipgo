@@ -5,9 +5,12 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <script type="text/javascript" src="js/jquery-2.2.0.min.js"></script>
+  <script type="text/javascript" src="js/jquery-ui.min.js"></script>
   <script type="text/javascript" src="js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="js/script.js"></script>
   <link rel="stylesheet" href="css/bootstrap.min.css">
   <link rel="stylesheet" href="css/zip-style.css">
+  <link rel="stylesheet" href="css/jquery-ui.min.css">
 </head>
 <body>
   <nav class="navigation">
@@ -28,18 +31,20 @@
       </a>  
     </div>       
     <div id="navbar" class="navbar-collapse collapse newcollapse">
-      <ul class="nav navbar-nav navbar-left navigation-logo-menu">
+      <ul class="nav navbar-nav navbar-right navigation-logo-menu">
         <li><a href="#">Home</a></li>
         <li><a href="#">Discover Routes</a></li>
         <li><a href="#">Contact</a></li>
         <li>
-        <button class="dropdown-toggle profile-dropdown" type="button" data-toggle="dropdown">Damoh
-        <span class="caret"></span></button>
-        <ul class="dropdown-menu">
-          <li><a href="#">Element #1</a></li>
-          <li><a href="#">Element #2</a></li>
-          <li><a href="#">Element #3</a></li>
-        </ul>
+          <button class="dropdown-toggle profile-dropdown" type="button" data-toggle="dropdown">Damoh
+          <span class="caret"></span></button>
+          <ul class="dropdown-menu">
+            <li><a href="#">Profile</a></li>
+            <li><a href="#">Corporate Bus</a></li>
+            <li><a href="#">History</a></li>
+            <li><a href="#" data-toggle="modal" data-target="#myModal">Sign In</a></li>
+            <li><a href="#">Log Out</a></li>
+          </ul>
         </li>
       </ul>
     </div>

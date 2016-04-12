@@ -133,16 +133,19 @@ body
 .profile-dropdown + .dropdown-menu{
 	background:#272727 !important;
 	color:#8D958D !important;
+	padding: 20px 10px;
 }
 .profile-dropdown + .dropdown-menu li{
 	margin:5px 10px;
 	border:none;
 	padding:0px;
-
 }
 .profile-dropdown + .dropdown-menu li a{
 	color:#8D958D !important;
-	padding:0px !important;
+	padding:0px 0px 10px !important;
+}
+.profile-dropdown + .dropdown-menu li:last-child a{
+	color:#737272 !important;
 }
 .profile-dropdown:before{
 	content:"";
@@ -200,10 +203,61 @@ body
 	width: 88%;
 }
 .pass-img-box{
+	overflow:hidden;
+	padding:3%;
+	background:url(../img/pass-background.png) no-repeat;
+	background-size: 100% 100%;
+}
+.pass-left{
+	float:left;
+	width:80%;
+}
+.pass-right{
+	float:left;
+	width:20%;
 	text-align: center;
 }
-.pass-img-box img{
-	max-width: 100%;
+.pass-title{
+	font-size: 18px;
+	color:#1d5a3b;
+	margin:0px;
+}
+.pass-company{
+	color:  #fefefe;
+	font-size: 18px;
+	margin-bottom:20px;
+}
+.pass-car{
+	width:60px;
+	margin-bottom: 15px;
+}
+.pass-number{
+	font-size: 22px;
+	color:#fff;
+	margin-bottom: 35px;
+}
+.pass-name{
+	font-size:20px;
+	color:#fff;
+	text-shadow: 0px 1px 2px rgba(33, 33, 33, 0.64);
+}
+.pass-time{
+	margin:0px;
+	font-size:18px;
+	color:#fff;
+}
+.pass-time span{
+	font-size: 16px;
+	color:  #1d5a3b;
+}
+.pass-logo{
+	width:85px;
+}
+.pass-money{
+	color:  #fefefe;
+	font-size: 30px;
+	margin-top: 135px;
+	margin-bottom: 0px
 }
 .black-button{
 	padding:4% 16%;
@@ -819,6 +873,7 @@ select:invalid{
 	    position: absolute;
 	    right: 0px;
 	    top: 38px;
+	    z-index: 1;
 	}
 	.navigation-logo
 	{
@@ -899,6 +954,96 @@ select:invalid{
 	{
 		display: block;
 	}
+	.content{
+		width:95%;
+	}
+	.main-content{
+		background:#fff;
+	}
+	.pass-content{
+		width:100%;
+	}
+	.welcome-title{
+		font-size: 20px;
+	}
+	.welcome-des{
+		font-size: 11px;
+		margin-top:10px;
+		margin-bottom: 30px;
+	}
+	.pass-description{
+		width:100%;
+		font-size: 12px;
+	}
+	.pass-title{
+		font-size: 13px;
+	}
+	.pass-company{
+		display: none;
+	}
+	.pass-name{
+		display: none;
+	}
+	.pass-number{
+		font-size: 12px;
+	}
+	.pass-time{
+		font-size: 10px;
+	}
+	.pass-time span{
+		font-size: 9px;
+	}
+	.pass-car{
+	    width: 35px;
+	    margin:20px 0px 5px;
+	}
+	.pass-logo {
+	    width: 45px;
+	}
+	.pass-money {
+	    color: #fefefe;
+	    font-size: 12px;
+	    margin-top: 76px;
+	}
+	.pass-img-box{
+		width: 85%;
+    	margin: auto;
+	}
+	.black-button{
+		font-size:14px;
+	}
+	.welcome{
+		margin-top: 30px;
+	}
+	.ride-block{
+		width:100%;
+		padding:10px 0px 0px 35px;
+	}
+	.ride-radio:checked + .ride-block {
+	    background: white url(../img/green-circle.png) no-repeat 15px center;
+	}
+	.ride-block{
+		background: white url(../img/grey-circle.png) no-repeat 15px center;
+	}
+	.route-from-text{
+		font-size: 12px;
+	}
+	.route-to-text{
+		font-size: 12px;
+	}
+	.ride-route-status{
+		font-size: 12px;
+	}
+	.route-to-text {
+	    padding-right: 60px
+	}
+	.ride-ref{
+		font-size: 14px;
+	}
+	.ride-time{
+		font-size: 12px;
+	}
+
 }
 
 .labelFrom {
