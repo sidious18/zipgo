@@ -507,6 +507,241 @@ select:invalid{
 	top:6px;
 	margin-right: 5px;
 }
+.tracking-confirmation{
+	padding:0px;
+	font-size:0px;
+	margin-bottom: 20px;
+}
+.tracking-confirmation li{
+	display: inline-block;
+    vertical-align: top;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 1.2;
+}
+.tracking-confirmation li:first-child{
+	width:6%;
+}
+.tracking-confirmation li:last-child{
+	width:94%;
+	padding-left: 2%;
+}
+.tracking-route li:first-child{
+	width:4.5%;
+}
+.tracking-route li:first-child img{
+	width:100%;
+}
+.tracking-route li:last-child{
+	width:95.5%;
+	padding-left: 2%;
+}
+.tracking-confirmation li img{
+	vertical-align: top;
+	margin-top: 3px;
+	margin-right: 5px;
+	width:100%;
+}
+.tracking-route{
+	padding:0px;
+	font-size:0;
+}
+.tracking-route li{
+	display: inline-block;
+	vertical-align: top;
+	font-size: 16px;
+}
+.tracking-route li img{
+	vertical-align: top;
+	margin-right: 4px;
+}
+.tracking-from{
+	color:  #37b777;
+	margin-bottom: 10px;
+}
+.tracking-to{
+	color:  #ff0000;
+}
+.left-tracking{
+	float:left;
+	width:65%;
+	margin-top:-5%;
+}
+.right-tracking{
+	float:left;
+	width:35%;
+	margin-top:-5%;
+}
+.car-number{
+	padding:0px;
+	font-size:0;
+	color:#555;
+}
+.car-number li{
+	font-size:16px;
+	display: inline-block;
+	vertical-align: top;
+}
+.car-number li:first-child{
+	width:18%;
+	padding:0 4.5%;
+}
+.car-number li:first-child img{
+	width:100%;
+}
+.car-number li:last-child{
+	width:82%;
+}
+.car-type{
+	padding:0px;
+	font-size: 0;
+	color:#555;
+}
+.car-type li{
+	font-size: 16px;
+	display: inline-block;
+	vertical-align: top;
+}
+.car-type li:first-child{
+	width:17.5%;
+}
+.car-type li:last-child{
+	width:82.5%;
+}
+#tracking-map{
+	width:100%;
+	height:390px;
+}
+.pickup-map{
+	position: absolute;
+	z-index: 2;
+	bottom:3%;
+	left:3%;
+	background:#fff;
+	border-radius: 50%;
+	width:100px;
+	height:100px;
+	text-align: center;
+	padding-top:31px;
+	-webkit-box-shadow: 0px 0px 11px -1px rgba(0,0,0,0.75);
+	-moz-box-shadow: 0px 0px 11px -1px rgba(0,0,0,0.75);
+	box-shadow: 0px 0px 11px -1px rgba(0,0,0,0.75);
+}
+.pickup-map span{
+	display: inline-block;
+	color:  #f26522;
+}
+.map-box{
+	position: relative;
+	clear: both;
+}
+.company-select{
+	color:  #3b3b3b;
+	font-size:16px;
+}
+.company-select:before{
+	background: url(../img/train-pic.png) no-repeat;
+	content:"";
+	width:20px;
+	height:22px;
+	display: inline-block;
+	position: relative;
+	top:5px;
+	margin-right: 15px;
+}
+.company-dropdown button{
+	width:100%;
+	border:none;
+	background: rgba(236, 236, 236, 0.5);
+	position: relative;
+}
+.company-dropdown button span{
+	position: absolute;
+	right:10px;
+	top:15px;
+}
+.company-dropdown .dropdown-menu{
+	width:100%;
+	background:#FAFAFA;
+}
+.company-dropdown .dropdown-menu li{
+	text-align: center;
+	background:#FAFAFA;
+}
+.company-dropdown .dropdown-menu li a{
+	padding:8px 0px;
+	margin:0px 5px;
+	border-bottom: 1px solid #F4F4F4;
+}
+.company-dropdown #company-city-button{
+	width:100% !important;
+	text-align: center;
+}
+.company-dropdown .ui-selectmenu-text{
+	text-align: center !important;
+}
+#company-city-menu li{
+	text-align: center;
+	padding:10px 8px;
+	border:none!important;
+	border-bottom: 1px solid #F4F4F4 !important;
+	background:#FAFAFA;
+}
+.ui-state-focus{
+	border:none!important;
+	border-bottom: 1px solid #F4F4F4 !important;
+	border-top:none !important;
+	margin:0px !important;
+}
+#company-city-menu li:first-child{
+	display: none;
+}
+#company-city-button .ui-icon-triangle-1-s{
+	border-top: 6px solid !important;
+	border-right: 4px solid transparent !important;
+	border-left: 4px solid transparent !important;
+	margin-top: -2px;
+	width:auto;
+	height:auto;
+}
+.company-list{
+	width:65%;
+	font-size: 0;
+	margin: 7% auto 12%;
+	clear:both;
+}
+.company-list li{
+	display: inline-block;
+	width:25%;
+	margin-bottom: 3%;
+}
+.request-company{
+	font-size:0;
+	width:40%;
+	margin:auto;
+	padding-left: 70px;
+}
+.request-company li{
+	display: inline-block;
+	font-size: 14px;
+	color:  #9f9f9f;
+}
+.request-company li:first-child{
+	margin-right:40px;
+}
+.request-company li a{
+	font-size: 16px;
+	color:  #0e9b57;
+	text-transform: uppercase;
+}
+.company-done{
+	margin-top:10%;
+	text-align: center;
+}
+.company-done a{
+	color:#B7B7B9 !important;
+	margin-right:50px;
+}
 @media(max-width:1920px)
 {
 	.navigation
@@ -664,4 +899,21 @@ select:invalid{
 	{
 		display: block;
 	}
+}
+
+.labelFrom {
+    color: #fe1f2e;
+    font-size: 12px;
+    font-weight: bold;
+    text-align: center;
+    width: 50px;
+    white-space: nowrap;
+}
+.labelTo{
+	color: #2cbf4f;
+    font-size: 12px;
+    font-weight: bold;
+    text-align: center;
+    width: 50px;
+    white-space: nowrap;
 }
