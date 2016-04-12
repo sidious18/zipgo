@@ -44,21 +44,6 @@
             <li><a href="#">History</a></li>
             <li><a href="#" data-toggle="modal" data-target="#myModal">Sign In</a></li>
             <li><a href="#">Log Out</a></li>
-        <button class="dropdown-toggle profile-dropdown" type="button" data-toggle="dropdown">Damoh
-        <span class="caret"></span></button>
-        <ul class="dropdown-menu">
-          <li><a href="#">Element #1</a></li>
-          <li><a href="#">Element #2</a></li>
-          <li><a href="#">Element #3</a></li>
-        </ul>
-        </li>
-        <li>
-        <button class="dropdown-toggle profile-dropdown" type="button" data-toggle="dropdown">Modals
-          <span class="caret"></span></button>
-          <ul class="dropdown-menu">
-            <li><a href="#" data-toggle="modal" data-target="#SignInModal">Ordinary Sign In</a></li>
-            <li><a href="#" data-toggle="modal" data-target="#SocialSignInModal">Social Sign In</a></li>
-            <li><a href="#" data-toggle="modal" data-target="#VerifyCode">Verify Modal</a></li>
           </ul>
         </li>
       </ul>
@@ -110,8 +95,8 @@
     </div>
   </div>
   <!--Signin Modal -->
-  <div id="SignInModal" class="modal fade" role="dialog">
-    <div class="modal-dialog constant-modal-height">
+  <div id="myModal" class="modal fade" role="dialog">
+    <div class="modal-dialog">
       <div class="modal-content signin-modal-content">
         <div class="signin-modal-header">
           <button type="button" class="close signin-close glyphicon glyphicon-remove-sign" data-dismiss="modal"></button>
@@ -166,75 +151,6 @@
           </form>
         </div>
       </div>
-    </div>
-  </div>
-  <!--Social Signin Modal -->
-  <div id="SocialSignInModal" class="modal fade" role="dialog">
-    <div class="modal-dialog constant-modal-height">
-      <div class="modal-content social-signin-modal-content">
-        <div class="signin-modal-header">
-          <button type="button" class="close signin-close glyphicon glyphicon-remove-sign" data-dismiss="modal"></button>
-          <div class="modal-title-wrapper">
-            <h4 class="modal-title">Sign In</h4>
-          </div>
-        </div>
-        <div class="modal-body">
-            <div class="row">
-              <div class="col-sm-10 fb-signin">
-                <img class="social-icon" src="img/fb.png">
-                <span>Sign in with facebook</span>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-sm-10 google-signin">
-                <img class="social-icon" src="img/google.png">
-                <span>Sign in with Google +</span>
-              </div>
-            </div>
-        </div>
-      </div>
-    </div>
-  </div>
-    <!--Verify Code Modal -->
-  <div id="VerifyCode" class="modal fade" role="dialog">
-    <div class="modal-dialog constant-modal-height">
-      <div class="modal-content signin-modal-content">
-        <div class="signin-modal-header">
-          <button type="button" class="close signin-close glyphicon glyphicon-remove-sign" data-dismiss="modal"></button>
-        </div>
-        <div class="row">
-          <div class="col-sm-9 center">
-            <h4 class="verify-modal-title">Verify</h4>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-sm-9 center">
-            <p class="verify-modal-instructions">Enter Verification code send on your phone</p>
-          </div>
-        </div>
-        <form>
-          <div class="row">
-            <fieldset class="form-group verify-form-group col-sm-6">
-                <img class="form-icon" src="img/phone.png">
-                <input type="number" class="verify-form-control" id="InputPhone" placeholder="+91 9950000000">
-            </fieldset>
-          </div>
-          <div class="row">
-            <fieldset class="verify-form-group-code col-sm-6">
-              <input type="text" class="verify-form-control-code" id="InputCode" placeholder="0-0-0-0">
-            </fieldset>
-          </div>
-          <div class="row">
-          <div class = "resend-otp-wrapper">
-            <a href="#" class="resend-otp">RESEND OTP</a>
-          </div>
-          </div>
-          <div class="row">
-            <div class="verify-wrapper">
-              <button type="submit" class="btn btn-primary btn-confirm">CONFIRM</button>
-            </div>
-          </div>
-        </form>
     </div>
   </div>
 </body>
