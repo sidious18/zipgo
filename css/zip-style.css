@@ -173,6 +173,7 @@ body
 }
 .main-content{
 	padding:10% 0;
+	background: #f9f9f9;
 }
 .main-content-menu {
 	text-align: right;
@@ -398,13 +399,34 @@ select:invalid{
 	.modal-dialog {
     text-align: -webkit-center;
 	}
+}
+.my-rides-box{
+	background:url(../img/grey-stick1.png) no-repeat;
+}
+.my-rides-box .ride-box:last-child{
+	margin:0px;
+}
+.ride-box{
+	background:url(../img/grey-circle.png) no-repeat 0px center;
+	overflow:hidden;
+	margin: 0px 0px 14px;
+}
 .ride-block{
-	width:80%;
+	width:93%;
+	padding: 2% 6% 1% 8%;
+	background: white url(../img/grey-circle.png) no-repeat 25px center;;
+	float: right;
+	margin: 0px;
 }
 .ride-route{
 	padding:0px;
 }
-
+.ride-radio{
+	display: none;
+}
+.ride-radio:checked + .ride-block{
+	background: white url(../img/green-circle.png) no-repeat 25px center;;
+}
 .ride-route-from:before{
 	background: url(../img/from-to.png) no-repeat;
 	padding-left: 25px;
@@ -442,11 +464,10 @@ select:invalid{
 	top:0px;
 	right:0px;
 	text-align: right;
-	font-weight: bold;
-	color:black;
+	color:  #343434;
 }
 .route-to-text{
-	padding-right:90px;
+	padding-right:85px;
 	padding-left: 30px;
 }
 .route-from-text{
@@ -454,6 +475,37 @@ select:invalid{
 	padding-bottom: 20px;
 	background: url(../img/grey-stick.jpg) repeat-y;
 	background-position: 14px 0px;
+}
+.ride-title{
+	width:120px;
+	margin: -7% auto 4%;
+	text-align: center;
+	border-bottom:1px solid #d6d6d6;
+	font-size: 18px;
+	color:black;
+	padding-bottom: 6px;
+	text-transform: uppercase;
+}
+.ride-ref{
+	color:#737373;
+	font-size: 18px;
+	font-weight: normal;
+	margin:0px 0px 0px 10px;
+}
+.ride-ref span{
+	color:  #0e9b57;
+}
+.ride-time{
+	color:#737070;
+	font-size: 16px;
+	font-weight: normal;
+	margin:0px 0px 20px 5px;
+}
+.ride-time .glyphicon-time{
+	font-size: 21px;
+	position: relative;
+	top:6px;
+	margin-right: 5px;
 }
 @media(max-width:1920px)
 {
