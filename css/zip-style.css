@@ -197,6 +197,23 @@ body
 {
 	color:  #0c9a52;
 }
+.mail-content-menu{
+	text-align: right;
+}
+.mail-content-menu li{
+	list-style-type: none;
+	font-size: 16px;
+	margin-bottom: 15px;
+}
+.mail-content-menu li a{
+	color:  #3b3b3b !important;
+}
+.mail-content-menu li a .glyphicon{
+	color:#aaa;
+}
+.mail-content-menu li:first-child a .glyphicon{
+	margin-right: 10px;
+} 
 .pass-description{
 	text-align: center;
 	margin: 10% auto 25%;
@@ -942,6 +959,62 @@ select:invalid{
 	color:#B7B7B9 !important;
 	margin-right:50px;
 }
+.verify-company-img{
+	margin: 3% 0px 8%;
+	text-align: center;
+}
+.verify-title{
+	text-align: center;
+	text-transform: uppercase;
+	font-size: 18px;
+	color:  #3b3b3b;
+	margin-bottom: 6%;
+}
+.verify-input{
+	width:80%;
+	margin:0px auto 3%;
+}
+.verify-input input{
+	background: #f1f3f5 !important;
+	border:none !important;
+	outline:none !important;
+	box-shadow: none !important;
+}
+.verify-input .input-group{
+	margin-bottom: 4px;
+}
+.verify-input .input-group span{
+	border:none !important;
+	background: #f1f3f5 !important;
+	outline:none !important;
+	box-shadow: none !important;
+}
+.verify-note{
+	width:80%;
+	color:  #8c8c8c;
+	margin:auto;
+	text-align: center;
+}
+.verify-links{
+	width:64%;
+	margin: 14% auto 6%;
+	overflow:hidden;
+}
+.verify-links a{
+	color:  #7f7f7f !important;
+}
+.verify-links a:first-child{
+	float:left;
+}
+.verify-links a:last-child{
+	float:right;
+}
+.bottom-button .black-button{
+	padding: 2% 16%;
+}
+.bottom-button a{
+	display: none;
+}
 @media(max-width:1920px)
 {
 	.navigation
@@ -1105,6 +1178,7 @@ select:invalid{
 	}
 	.main-content{
 		background:#fff;
+		padding:0px;
 	}
 	.pass-content{
 		width:100%;
@@ -1189,7 +1263,61 @@ select:invalid{
 	.ride-time{
 		font-size: 12px;
 	}
-
+	.mail-back{
+		display: none;
+	}
+	.mail-content-menu{
+		text-align: left;
+		padding:0px;
+	}
+	.mail-content-menu li a{
+		font-size: 12px;
+	}
+	.verify-company-img{
+		width:40%;
+		margin:auto;
+	}
+	.verify-company-img img{
+		width:100%;
+	}
+	.verify-title{
+		font-size: 14px;
+		margin-bottom: 10%;
+	}
+	.verify-input {
+	    margin: 0px auto 5%;
+	}
+	.verify-input input{
+		font-size: 12px;
+		height: 25px;
+	}
+	.verify-input .input-group span{
+		font-size: 12px;
+		padding: 3px 5px;
+	}
+	.verify-note{
+		font-size: 10px;
+		width:100%;
+	}
+	.verify-links{
+		width:100%;
+		font-size: 12px;
+	}
+	.bottom-button{
+		margin-bottom: 3%;
+		overflow:hidden;
+	}
+	.bottom-button a{
+		float:left;
+		display: inline-block;
+		color:  #3b3b3b !important;
+		margin-top: 4%;
+	}
+	.bottom-button .black-button{
+		float:right;
+		font-size: 11px;
+		padding:4% 6%;
+	}
 }
 
 .labelFrom {
