@@ -118,6 +118,14 @@ body
 	background-position: 0px 12px;
 	background-repeat: repeat-x;
 	background-size: 530px;
+	text-align: center;
+}
+.welcome-map{
+	padding-top: 1%;
+
+}
+.welcome-image{
+	height:100px;
 }
 .profile-dropdown{
 	background:inherit;
@@ -827,7 +835,7 @@ select:invalid{
 }
 #tracking-map{
 	width:100%;
-	height:390px;
+	height:460px;
 }
 .pickup-map{
 	position: absolute;
@@ -1026,6 +1034,123 @@ select:invalid{
 	color:  #2d2b2b;
 	font-size: 16px;
 }
+.customer-info-list{
+	padding:0px;
+	width:98%;
+	margin:1% auto 2%;
+	border-bottom: 1px solid #c4c4c7;
+}
+.customer-info-list li{
+	list-style-type: none;
+	overflow:hidden;
+}
+.customer-email .glyphicon-envelope{
+	color: rgb(170, 170, 170);
+	font-size: 18px;
+	top: 4px;
+	margin-right: 7px;
+}
+.customer-name{
+	color:  #1a1a1a;
+	font-size: 16px;
+}
+.customer-name img{
+	margin-right: 7px;
+}
+.customer-email{
+	float:left;
+	width:60%;
+}
+.customer-ad{
+	float:right;
+	width:40%;
+	text-align: right;
+}
+.customer-instructions{
+	text-align: center;
+	margin-bottom: 2%;
+	clear: both;
+	border-top: 1px solid #b2b3b6;
+}
+.customer-instructions h4{
+	font-weight: bold;
+}
+.customer-instructions p{
+	color:  #484848;
+}
+.map-container{
+	position: relative;
+}
+.map-left-block{
+	position: absolute;
+	width:35%;
+	height:95%;
+	background: #fff;
+	z-index: 2;
+	left: 0px;
+	top: 0px;
+	margin:1%;
+}
+.stop-table{
+	width:90%;
+	margin:3%;
+}
+.stop-table tr td:first-child{
+	width:30px;
+	text-align: center;
+}
+.stop-table tr td:last-child p{
+	color:  #2b2b2b;
+	font-size: 16px;
+	text-decoration: uppercase;
+	margin-bottom: 5px;
+	padding-left: 4% !important; 
+	font-weight: bold; 
+}
+.stop-table tr td:last-child{
+}
+.stop-table .input-group{
+	border-radius: 0px;
+}
+.stop-table .form-control{
+	outline:none !important;
+	border:none !important;
+	border-bottom: 1px solid #c4c4c7 !important;
+	box-shadow: none !important;
+	padding-left: 4.5% !important;
+	border-radius: 0px !important;
+}
+.stop-table .input-group .input-group-addon{
+	border:none !important;
+	border-bottom: 1px solid #c4c4c7 !important;
+	background:inherit !important;
+	border-radius: 0px !important;
+	padding-right: 4px !important;
+}
+.stop-table .ui-autocomplete{
+	width:100% !important;
+}
+.stop-table .ui-autocomplete .ui-menu-item{
+	border:0px !important;
+}
+.map-button{
+	float: right;
+	margin: 2% 10%;
+	width: 30%;
+}
+.map-button .black-button{
+	border-radius: 10px;
+}
+.no-routes-block{
+	text-align: center;
+    width: 90%;
+    margin: 85px auto 0px;
+}
+.no-routes-block p{
+	color:  #020202;
+	text-transform: uppercase;
+	font-size: 16px;
+}
 @media(max-width:1920px)
 {
 	.navigation
@@ -1102,7 +1227,7 @@ select:invalid{
 	    position: absolute;
 	    right: 0px;
 	    top: 38px;
-	    z-index: 1;
+	    z-index: 5;
 	}
 	.navigation-logo
 	{
@@ -1334,8 +1459,118 @@ select:invalid{
 	.verify-successful p{
 		font-size: 12px;
 	}
+	.customer-info-list{
+		border:none;
+		margin-top:15px;
+	}
+	.customer-ad{
+		width:100%;
+		clear:both;
+		text-align: center;
+		font-size:10px;
+		border-top:1px solid #b2b3b6;
+		padding-top:12px;
+		margin-top:12px;
+		margin-bottom: 20px;
+	}
+	.customer-email{
+		width: 75%;
+		font-size: 9px;
+		float:left;
+	}
+	.customer-email .glyphicon-envelope{
+		font-size: 13px;
+		top:2px;
+	}
+	.customer-name img {
+	    margin-right: 5px;
+	    width: 14px;
+	}
+	.customer-name{
+		font-size: 12px;
+		margin-bottom: 5px;
+		float: left;
+		width:75%;
+		margin-top:20px;
+	}
+	.customer-info{
+		width:100%;
+	}
+	.welcome-map
+	{
+		float:right;
+		width:25%;
+		margin-top: 15px;
+	}
+	.welcome-map img{
+		width:100%;
+		height:auto;
+	}
+	.customer-instructions{
+		clear:both;
+		border-top:none;
+		margin:0px 0px 8%;
+	}
+	.customer-instructions h4{
+		font-size: 12px;
+		margin:0px 0px 3px;
+	}
+	.customer-instructions p{
+		font-size: 10px;
+	}
+	.map-left-block{
+		position: relative;
+		width:100%;
+		margin:0;
+	}
+	#tracking-map{
+		height: 260px;
+	}
+	.stop-table tr td:last-child p{
+		font-size: 12px;
+		margin:0px;
+	}
+	.stop-table .form-control{
+		height:auto !important;
+		padding:0px 0px 0px 4.5% !important;
+		font-size:12px;
+		border-bottom: none !important;
+	}
+	.stop-table .input-group .input-group-addon{
+		padding:0px 0px 0px 5px;
+		border-bottom: none !important;
+		font-size: 12px;
+	}
+	.stop-table .input-group .input-group-addon .glyphicon{
+		top:-8px;
+	}
+	.stop-table tr td{
+	    padding-bottom: 5px;
+	    border-bottom: 1px solid #c4c4c7;
+	}
+	.map-left-block{
+		width: 90%;
+		margin: 0px auto 10%;
+	}
+	.map-button{
+		float:none;
+		margin: 5% auto;
+		width:80%;
+	}
+	.map-button .black-button{
+		border-radius: 2px;
+	}
+	.customer-ad{
+		padding-top: 20px;
+	}
+	.no-routes-block{
+		width:100%;
+		margin:50px auto;
+	}
+	.no-routes-block span{
+		font-size: 12px;
+	}
 }
-
 .labelFrom {
     color: #fe1f2e;
     font-size: 12px;

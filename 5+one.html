@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>zip.go</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script type="text/javascript" src="js/jquery-2.2.0.min.js"></script>
+  <script type="text/javascript" src="js/jquery-ui.min.js"></script>
+  <script type="text/javascript" src="js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="js/script.js"></script>
+  <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?v=3&amp;sensor=false"></script>
+  <script type="text/javascript" src="js/marker_label.js"></script>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/zip-style.css">
+  <link rel="stylesheet" href="css/jquery-ui.min.css">
+</head>
+<body>
+  <script>
+      function initMap() {
+         var latLng = new google.maps.LatLng(49.47805, -123.84716);
+         var map = new google.maps.Map(document.getElementById('tracking-map'), {
+           zoom: 12,
+           center: latLng,
+           scrollwheel: false,
+           disableDefaultUI: true
+         });
+         var markerFrom = new MarkerWithLabel({
+           position: new google.maps.LatLng(49.49605, -123.84716),
+           map: map,
+           labelContent: "ECC",
+           labelAnchor: new google.maps.Point(25, 65),
+           labelClass: "labelFrom", 
+           icon: "img/label-from.png"
+         });
+         var markerTo = new MarkerWithLabel({
+           position: new google.maps.LatLng(49.475, -123.84),
+           map: map,
+           labelContent: "MRTL",
+           labelAnchor: new google.maps.Point(25, 60),
+           labelClass: "labelTo", 
+           icon: "img/label-to.png"
+         });
+       }
+       jQuery(document).ready(function($) {
+         initMap();
+       });
+    </script>
+  <nav class="navigation">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navigation-logo" href="#">
+        <p class="navigation-logo-top">
+          ZipGO
+        </p>
+        <p class="navigation-logo-bottom">
+          Commute Smarter
+        </p>
+      </a>  
+    </div>       
+    <div id="navbar" class="navbar-collapse collapse newcollapse">
+      <ul class="nav navbar-nav navbar-right navigation-logo-menu">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Discover Routes</a></li>
+        <li><a href="#">Contact</a></li>
+        <li>
+          <button class="dropdown-toggle profile-dropdown" type="button" data-toggle="dropdown">Damoh
+          <span class="caret"></span></button>
+          <ul class="dropdown-menu">
+            <li><a href="#">Profile</a></li>
+            <li><a href="#">Corporate Bus</a></li>
+            <li><a href="#">History</a></li>
+            <li><a href="#" data-toggle="modal" data-target="#SignInModal">Ordinary Sign In</a></li>
+            <li><a href="#" data-toggle="modal" data-target="#SocialSignInModal">Social Sign In</a></li>
+            <li><a href="#" data-toggle="modal" data-target="#VerifyCode">Verify Modal</a></li>
+            <li><a href="#">Log Out</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <div class="container content">
+    <div class="welcome welcome-map">
+      <img src="img/csg-top.png" alt="Csg-top" class="welcome-image">
+    </div>
+    <div class="customer-info">
+      <p class="customer-name"><img src="img/user.png" alt="User">Deepthi Mehta</p>
+      <p class="customer-email"> <span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>deepthi.mehta@cnginternational.com</p>
+      <p class="customer-ad">Enroll before 26 April 2016 to get the pass for May 2016</p>
+    </div>
+    <div class="customer-instructions">
+      <h4>
+        SELECT HOME AND OFFICE
+      </h4>
+      <p>
+        We will fetch the right stop for you
+      </p>
+    </div>
+    <div class="row map-container">
+      <div class="map-left-block">
+        <table class="stop-table">
+          <tr>
+            <td>
+              <img src="img/home.png" alt="Home">
+            </td>
+            <td>
+              <p>HOME</p>
+              <div class="input-group" id="home-input-box">
+                <input type="text" class="form-control" placeholder="Sony World Junction, Koramangala" id="home-input">
+                <span class="input-group-addon" id="basic-addon2"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span></span>
+              </div>
+            </td>
+          </tr>
+        </table>
+        <table class="stop-table">
+          <tr>
+          <td>
+            <img src="img/case.png" alt="Case">
+          </td>
+          <td>
+            <p>WORK</p>
+            <div class="input-group" id="work-input-box">
+              <input type="text" class="form-control" placeholder="Select work Location" id="work-input">
+              <span class="input-group-addon" id="basic-addon2"><span class="glyphicon glyphicon-triangle-bottom" aria-hidden="true"></span></span>
+            </div>
+          </td>
+          </tr>
+        </table>
+        <div class="no-routes-block">
+          <p>
+            No routes found
+          </p>
+          <span>
+            We have noted your requirement and will try to expand
+coverage to your area
+          </span>
+        </div>
+      </div>
+      <div id="tracking-map"></div>
+    </div>
+    <div class="map-button">
+      <input type="submit" class="black-button" value="Proceed">
+    </div>
+  </div>
+  
+  <!--Signin Modal -->
+  <div id="SignInModal" class="modal fade" role="dialog">
+    <div class="modal-dialog constant-modal-height">
+      <div class="modal-content signin-modal-content">
+        <div class="signin-modal-header">
+          <button type="button" class="close signin-close glyphicon glyphicon-remove-sign" data-dismiss="modal"></button>
+          <div class="modal-title-wrapper">
+            <h4 class="modal-title">Sign In</h4>
+          </div>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="row">
+              <fieldset class="form-group signin-form-group col-sm-9">
+                <img class="form-icon width22" src="img/silhouette.png">
+                <input type="text" class="signin-form-control" id="InputName" placeholder="Name">
+              </fieldset>
+            </div>
+            <div class="row">
+              <fieldset class="form-group signin-form-group col-sm-9">
+                <img class="form-icon" src="img/mail.png">
+                <input type="email" class="signin-form-control" id="InputEmail" placeholder="Email">
+              </fieldset>
+            </div>
+            <div class="row">
+              <fieldset class="form-group signin-form-group col-sm-9">
+                <img class="form-icon" src="img/phone.png">
+                <input type="number" class="signin-form-control" id="InputPhone" placeholder="+91 Phone Number">
+              </fieldset>
+            </div>
+            <div class="row">
+              <fieldset class="form-group signin-form-group col-sm-9">
+                <img class="form-icon" src="img/marker.png">
+                <select class="signin-form-control" required id="SelectCity">
+                  <option value="" disabled selected>Select your City</option>
+                  <option>City1</option>
+                  <option>City2</option>
+                  <option>City3</option>
+                  <option>City4</option>
+                  <option>City5</option>
+                </select>
+              </fieldset>
+            </div>
+            <div class="row">
+              <div class="terms-and-conditions col-sm-9">
+                <span class="pre-terms">By verifying, you agree to our </span>
+                <a href="#" class="terms">terms and conditions.</a>
+              </div>
+            </div>
+            <div class="row">
+              <div class="verify-wrapper">
+                <button type="submit" class="btn btn-primary btn-verify">VERIFY</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--Social Signin Modal -->
+  <div id="SocialSignInModal" class="modal fade" role="dialog">
+    <div class="modal-dialog constant-modal-height">
+      <div class="modal-content social-signin-modal-content">
+        <div class="signin-modal-header">
+          <button type="button" class="close signin-close glyphicon glyphicon-remove-sign" data-dismiss="modal"></button>
+          <div class="modal-title-wrapper">
+            <h4 class="modal-title">Sign In</h4>
+          </div>
+        </div>
+        <div class="modal-body">
+            <div class="row">
+              <div class="col-sm-10 fb-signin">
+                <img class="social-icon" src="img/fb.png">
+                <span>Sign in with facebook</span>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-sm-10 google-signin">
+                <img class="social-icon" src="img/google.png">
+                <span>Sign in with Google +</span>
+              </div>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+    <!--Verify Code Modal -->
+  <div id="VerifyCode" class="modal fade" role="dialog">
+    <div class="modal-dialog constant-modal-height">
+      <div class="modal-content signin-modal-content">
+        <div class="signin-modal-header">
+          <button type="button" class="close signin-close glyphicon glyphicon-remove-sign" data-dismiss="modal"></button>
+        </div>
+        <div class="row">
+          <div class="col-sm-9 center">
+            <h4 class="verify-modal-title">Verify</h4>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-9 center">
+            <p class="verify-modal-instructions">Enter Verification code send on your phone</p>
+          </div>
+        </div>
+        <form>
+          <div class="row">
+            <fieldset class="form-group verify-form-group col-sm-6">
+                <img class="form-icon" src="img/phone.png">
+                <input type="number" class="verify-form-control" id="InputPhone" placeholder="+91 9950000000">
+            </fieldset>
+          </div>
+          <div class="row">
+            <fieldset class="verify-form-group-code col-sm-6">
+              <input type="text" class="verify-form-control-code" id="InputCode" placeholder="0-0-0-0">
+            </fieldset>
+          </div>
+          <div class="row">
+          <div class = "resend-otp-wrapper">
+            <a href="#" class="resend-otp">RESEND OTP</a>
+          </div>
+          </div>
+          <div class="row">
+            <div class="verify-wrapper">
+              <button type="submit" class="btn btn-primary btn-confirm">CONFIRM</button>
+            </div>
+          </div>
+        </form>
+    </div>
+  </div>
+</body>
+</html>

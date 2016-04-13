@@ -9,5 +9,34 @@ jQuery(document).ready(function($) {
   else{
     $(".my-rides-box").css("background", "none");
   }
+  //map-autocompliete
+  var homeInput = [
+     "Sony",
+     "World",
+     "Junction",
+     "Koramangala",
+     "Sony World",
+     "World Junction",
+     "Juncktion Koramangala"
+  ];
+  var workInput = [
+    "Select",
+    "Work",
+    "Location",
+    "Select Work",
+    "Work Location",
+    "Select Location",
+    "Select work Location"
+  ];
+
+  $("#home-input").autocomplete({
+    source: homeInput,
+    appendTo: "#home-input-box"
+  });
+
+  $("#work-input").autocomplete({
+    source: workInput,
+    appendTo: "#work-input-box"
+  });
 
 });
