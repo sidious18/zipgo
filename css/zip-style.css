@@ -1015,6 +1015,17 @@ select:invalid{
 .bottom-button a{
 	display: none;
 }
+.verify-successful{
+	text-align: center;
+	margin:5% 0;
+}
+.verify-successful img{
+	margin-bottom: 2%;
+}
+.verify-successful p{
+	color:  #2d2b2b;
+	font-size: 16px;
+}
 @media(max-width:1920px)
 {
 	.navigation
@@ -1075,7 +1086,6 @@ select:invalid{
 	{
 		font-size: 9px;
 	}
-
 }
 @media(max-width:767px)
 {
@@ -1317,6 +1327,12 @@ select:invalid{
 		float:right;
 		font-size: 11px;
 		padding:4% 6%;
+	}
+	.verify-successful img{
+		width:10%;
+	}
+	.verify-successful p{
+		font-size: 12px;
 	}
 }
 
