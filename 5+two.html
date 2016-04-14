@@ -8,11 +8,43 @@
   <script type="text/javascript" src="js/jquery-ui.min.js"></script>
   <script type="text/javascript" src="js/bootstrap.min.js"></script>
   <script type="text/javascript" src="js/script.js"></script>
+  <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?v=3&amp;sensor=false"></script>
+  <script type="text/javascript" src="js/marker_label.js"></script>
   <link rel="stylesheet" href="css/bootstrap.min.css">
   <link rel="stylesheet" href="css/zip-style.css">
   <link rel="stylesheet" href="css/jquery-ui.min.css">
 </head>
 <body>
+  <script>
+      function initMap() {
+         var latLng = new google.maps.LatLng(49.47805, -123.84716);
+         var map = new google.maps.Map(document.getElementById('tracking-map'), {
+           zoom: 12,
+           center: latLng,
+           scrollwheel: false,
+           disableDefaultUI: true
+         });
+         var markerFrom = new MarkerWithLabel({
+           position: new google.maps.LatLng(49.49605, -123.84716),
+           map: map,
+           labelContent: "ECC",
+           labelAnchor: new google.maps.Point(25, 65),
+           labelClass: "labelFrom", 
+           icon: "img/label-from.png"
+         });
+         var markerTo = new MarkerWithLabel({
+           position: new google.maps.LatLng(49.475, -123.84),
+           map: map,
+           labelContent: "MRTL",
+           labelAnchor: new google.maps.Point(25, 60),
+           labelClass: "labelTo", 
+           icon: "img/label-to.png"
+         });
+       }
+       jQuery(document).ready(function($) {
+         initMap();
+       });
+    </script>
   <nav class="navigation">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -52,48 +84,51 @@
     </div>
   </nav>
   <div class="container content">
-    <div class="welcome">
-      <h2 class="welcome-title">
-        Welcome to zipgo
-      </h2>
-      <p class="welcome-des">
-        Now Travel to Office in Style with ZipGo Corporate Pass.
+    <div class="welcome welcome-map">
+      <img src="img/csg-top.png" alt="Csg-top" class="welcome-image">
+    </div>
+    <div class="customer-info">
+      <p class="customer-name"><img src="img/user.png" alt="User">Deepthi Mehta</p>
+      <p class="customer-email"> <span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>deepthi.mehta@cnginternational.com</p>
+      <p class="customer-ad">Enroll before 26 April 2016 to get the pass for May 2016</p>
+    </div>
+    <div class="customer-instructions">
+      <h4>
+        SELECT HOME AND OFFICE
+      </h4>
+      <p>
+        We will fetch the right stop for you
       </p>
     </div>
-    <div class="row main-content">
-      <div class="col-sm-3">
-        <ul class="mail-content-menu">
-          <li><a href="#"><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>Enter Email</a></li>
-          <li class="mail-back"><a href="#"><span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span> Back</a></li>
-        </ul>
-      </div>
-      <div class="col-sm-9 col-md-7">
-        <div class="verify-company-img">
-          <img src="img/csg.png" alt="CSG">
-        </div>
-        <h4 class="verify-title">Verify official mail</h4>
-        <div class="verify-input">
-          <div class="input-group">
-            <input type="text" class="form-control" placeholder="Email" aria-describedby="basic-addon2">
-            <span class="input-group-addon" id="basic-addon2"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span></span>
+    <div class="row map-container">
+      <div class="map-left-block">
+        <h4 class="map-left-title">Office to home</h4>
+        <div class="map-left-routes">
+          <div>
+            <input type="radio" name="left-routes" id="left-route1" selected>
+            <label for="left-route1">Route1 <span>(10 Registered)</span></label>
+          </div>
+          <div>
+            <input type="radio" name="left-routes" id="left-route2">
+            <label for="left-route2">Route2 <span>(5 Registered)</span></label>
           </div>
         </div>
-        <p class="verify-note">
-          Enter Verification code send to your mail. The code will be active for another 72 hours.
-        </p>
-        <div class="verify-links">
-          <a href="#">Change Company</a>
-          <a href="#">Need Help?</a>
-        </div>
-        <div class="bottom-button">  
-          <a href="#"><span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span> Back</a>
-          <input type="submit" class="black-button" value="VERIFY OFFICIAL MAIL"> 
+        <div class="route-status">
+          <p>
+            Electronic City to Rajaji nagar Via
+          </p>
+          <span>
+            Indiranagar, Silkboard
+          </span>
         </div>
       </div>
-      <div class="col-sm-3 hidden-sm">
-      </div>
+      <div id="tracking-map"></div>
+    </div>
+    <div class="map-button">
+      <input type="submit" class="black-button" value="Proceed">
     </div>
   </div>
+  
   <!--Signin Modal -->
   <div id="SignInModal" class="modal fade" role="dialog">
     <div class="modal-dialog constant-modal-height">
