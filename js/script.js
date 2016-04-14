@@ -11,13 +11,13 @@ jQuery(document).ready(function($) {
   }
   //map-autocompliete
   var homeInput = [
-     "Sony",
-     "World",
-     "Junction",
-     "Koramangala",
-     "Sony World",
-     "World Junction",
-     "Juncktion Koramangala"
+    "Sony",
+    "World",
+    "Junction",
+    "Koramangala",
+    "Sony World",
+    "World Junction",
+    "Juncktion Koramangala"
   ];
   var workInput = [
     "Select",
@@ -39,4 +39,14 @@ jQuery(document).ready(function($) {
     appendTo: "#work-input-box"
   });
 
+  if($(".map-left-block-cover").length!=0){
+    $(".map-left-block-cover").parent().css("overflow-y","hidden");
+    $(".map-left-block").scrollTop(0);
+  }
+  //confirm trigger button
+  $("#route-trigger").click(function(event) {
+    var triggerBoofer = $(".confirm-route div:last-child").html();
+    $(".confirm-route div:last-child").html($(".confirm-route div:first-child").html());
+    $(".confirm-route div:first-child").html(triggerBoofer);
+  });
 });

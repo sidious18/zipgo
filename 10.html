@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>zip.go</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script type="text/javascript" src="js/jquery-2.2.0.min.js"></script>
+  <script type="text/javascript" src="js/jquery-ui.min.js"></script>
+  <script type="text/javascript" src="js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="js/script.js"></script>
+  <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?v=3&amp;sensor=false"></script>
+  <script type="text/javascript" src="js/marker_label.js"></script>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/zip-style.css">
+  <link rel="stylesheet" href="css/jquery-ui.min.css">
+</head>
+<body>
+  <nav class="navigation">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navigation-logo" href="#">
+        <p class="navigation-logo-top">
+          ZipGO
+        </p>
+        <p class="navigation-logo-bottom">
+          Commute Smarter
+        </p>
+      </a>  
+    </div>       
+    <div id="navbar" class="navbar-collapse collapse newcollapse">
+      <ul class="nav navbar-nav navbar-right navigation-logo-menu">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Discover Routes</a></li>
+        <li><a href="#">Contact</a></li>
+        <li>
+          <button class="dropdown-toggle profile-dropdown" type="button" data-toggle="dropdown">Damoh
+          <span class="caret"></span></button>
+          <ul class="dropdown-menu">
+            <li><a href="#">Profile</a></li>
+            <li><a href="#">Corporate Bus</a></li>
+            <li><a href="#">History</a></li>
+            <li><a href="#" data-toggle="modal" data-target="#SignInModal">Ordinary Sign In</a></li>
+            <li><a href="#" data-toggle="modal" data-target="#SocialSignInModal">Social Sign In</a></li>
+            <li><a href="#" data-toggle="modal" data-target="#VerifyCode">Verify Modal</a></li>
+            <li><a href="#">Log Out</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <div class="container content">
+    <div class="welcome no-company-welcome">
+    </div>
+    <h4 class="pass-date">PASS FOR JANUARY 2016</h4>
+    <div class="pass-img-box small-img-box">
+      <div class="pass-left">
+        <p class="pass-title">ZIPGO PASS</p>
+        <p class="pass-company">CNG INTERNATIONAL</p>
+        <img src="img/yellow-car.png" alt="Yellow car" class="pass-car">
+        <p class="pass-number">4160 2104 0205 5993</p>
+        <p class="pass-name">DEEPTHY MEHTHA</p>
+        <p class="pass-time"><span>VALIDITY</span> 01/JAN/16 - 31/JAM/16</p>
+      </div>
+      <div class="pass-right">
+        <img src="img/zip-logo.png" alt="Zip Logo" class="pass-logo">
+        <p class="pass-money">₹4800</p>
+      </div>
+    </div>
+    <div class="pass-status">
+      <h4>Pass Active</h4>
+      <h5>Consumed: ₹1200</h5>
+      <p>
+        Post ride limit consumption for the month, non discounted fare
+will apply on all routes
+      </p>
+      <p>
+        To continue your pass for Febuary 2016
+      </p>
+      <p>
+        Please renew and pay before 24 th January 2016
+      </p>
+    </div>
+    <div class="discontinue-link">
+      <a href="#">Discontinue</a>
+    </div>
+    <div class="confirm-button">
+      <a href="#"><span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span>Back</a>
+      <input class="black-button small-black-button" value="Renew pass" type="submit">
+    </div>
+  </div>
+
+  <!--Signin Modal -->
+  <div id="SignInModal" class="modal fade" role="dialog">
+    <div class="modal-dialog constant-modal-height">
+      <div class="modal-content signin-modal-content">
+        <div class="signin-modal-header">
+          <button type="button" class="close signin-close glyphicon glyphicon-remove-sign" data-dismiss="modal"></button>
+          <div class="modal-title-wrapper">
+            <h4 class="modal-title">Sign In</h4>
+          </div>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="row">
+              <fieldset class="form-group signin-form-group col-sm-9">
+                <img class="form-icon width22" src="img/silhouette.png">
+                <input type="text" class="signin-form-control" id="InputName" placeholder="Name">
+              </fieldset>
+            </div>
+            <div class="row">
+              <fieldset class="form-group signin-form-group col-sm-9">
+                <img class="form-icon" src="img/mail.png">
+                <input type="email" class="signin-form-control" id="InputEmail" placeholder="Email">
+              </fieldset>
+            </div>
+            <div class="row">
+              <fieldset class="form-group signin-form-group col-sm-9">
+                <img class="form-icon" src="img/phone.png">
+                <input type="number" class="signin-form-control" id="InputPhone" placeholder="+91 Phone Number">
+              </fieldset>
+            </div>
+            <div class="row">
+              <fieldset class="form-group signin-form-group col-sm-9">
+                <img class="form-icon" src="img/marker.png">
+                <select class="signin-form-control" required id="SelectCity">
+                  <option value="" disabled selected>Select your City</option>
+                  <option>City1</option>
+                  <option>City2</option>
+                  <option>City3</option>
+                  <option>City4</option>
+                  <option>City5</option>
+                </select>
+              </fieldset>
+            </div>
+            <div class="row">
+              <div class="terms-and-conditions col-sm-9">
+                <span class="pre-terms">By verifying, you agree to our </span>
+                <a href="#" class="terms">terms and conditions.</a>
+              </div>
+            </div>
+            <div class="row">
+              <div class="verify-wrapper">
+                <button type="submit" class="btn btn-primary btn-verify">VERIFY</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--Social Signin Modal -->
+  <div id="SocialSignInModal" class="modal fade" role="dialog">
+    <div class="modal-dialog constant-modal-height">
+      <div class="modal-content social-signin-modal-content">
+        <div class="signin-modal-header">
+          <button type="button" class="close signin-close glyphicon glyphicon-remove-sign" data-dismiss="modal"></button>
+          <div class="modal-title-wrapper">
+            <h4 class="modal-title">Sign In</h4>
+          </div>
+        </div>
+        <div class="modal-body">
+            <div class="row">
+              <div class="col-sm-10 fb-signin">
+                <img class="social-icon" src="img/fb.png">
+                <span>Sign in with facebook</span>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-sm-10 google-signin">
+                <img class="social-icon" src="img/google.png">
+                <span>Sign in with Google +</span>
+              </div>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+    <!--Verify Code Modal -->
+  <div id="VerifyCode" class="modal fade" role="dialog">
+    <div class="modal-dialog constant-modal-height">
+      <div class="modal-content signin-modal-content">
+        <div class="signin-modal-header">
+          <button type="button" class="close signin-close glyphicon glyphicon-remove-sign" data-dismiss="modal"></button>
+        </div>
+        <div class="row">
+          <div class="col-sm-9 center">
+            <h4 class="verify-modal-title">Verify</h4>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-9 center">
+            <p class="verify-modal-instructions">Enter Verification code send on your phone</p>
+          </div>
+        </div>
+        <form>
+          <div class="row">
+            <fieldset class="form-group verify-form-group col-sm-6">
+                <img class="form-icon" src="img/phone.png">
+                <input type="number" class="verify-form-control" id="InputPhone" placeholder="+91 9950000000">
+            </fieldset>
+          </div>
+          <div class="row">
+            <fieldset class="verify-form-group-code col-sm-6">
+              <input type="text" class="verify-form-control-code" id="InputCode" placeholder="0-0-0-0">
+            </fieldset>
+          </div>
+          <div class="row">
+          <div class = "resend-otp-wrapper">
+            <a href="#" class="resend-otp">RESEND OTP</a>
+          </div>
+          </div>
+          <div class="row">
+            <div class="verify-wrapper">
+              <button type="submit" class="btn btn-primary btn-confirm">CONFIRM</button>
+            </div>
+          </div>
+        </form>
+    </div>
+  </div>
+</body>
+</html>
