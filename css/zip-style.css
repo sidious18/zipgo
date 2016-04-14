@@ -1090,6 +1090,42 @@ select:invalid{
 	left: 0px;
 	top: 0px;
 	margin:1%;
+	overflow: auto;
+}
+.map-left-title{
+	color:  #656565;
+	font-size: 18px;
+	text-align: center;
+	text-transform: uppercase;
+	padding:5% 0 3%;
+	border-bottom: 1px solid #b2b3b6;
+	width:90%;
+	margin: auto;
+}
+.map-left-routes{
+	width:94%;
+	margin: 65px auto;
+	border-bottom: 1px solid #b2b3b6;
+	padding-bottom: 25px;
+}
+.map-left-routes input{
+	display: none;
+}
+.map-left-routes label{
+	background:url(../img/empty-circle.png) no-repeat;
+	padding-left: 30px;
+	cursor:pointer;
+	font-weight: normal;
+	color:#000;
+}
+.map-left-routes label span{
+	color:  #a4a4a4;
+}
+.map-left-routes div:first-child{
+	margin-bottom: 15px;
+}
+.map-left-routes input:checked + label{
+	background:url(../img/green-circle.png) no-repeat;
 }
 .stop-table{
 	width:90%;
@@ -1141,15 +1177,95 @@ select:invalid{
 .map-button .black-button{
 	border-radius: 10px;
 }
-.no-routes-block{
+.no-routes, .route-status{
 	text-align: center;
     width: 90%;
     margin: 85px auto 0px;
 }
-.no-routes-block p{
+.no-routes p, .route-status p{
 	color:  #020202;
-	text-transform: uppercase;
 	font-size: 16px;
+}
+.select-stop{
+	margin: 15px auto 25px;
+	width:60%;
+	text-align: center;
+}
+.select-stop h4{
+	text-transform: uppercase;
+	color:  #0e0e0e;
+	font-size: 18px;
+	margin: 0px 0px 5px;
+}
+.select-stop p{
+	color:  #0e0e0e;
+	font-size: 14px;
+	margin:0px;
+}
+.stop-description{
+	font-size: 0px;
+	width:100%;
+	margin-bottom: 5px;
+}
+.stop-block{
+	margin-bottom: 10px;
+}
+.stop-block label{
+    width: 94%;
+    margin: auto;
+    padding-left: 20px;
+    background: url(../img/empty-circle.png) no-repeat 0px top;
+    display: block;
+    cursor:pointer;
+}
+.stop-block input:checked + label{
+	background: url(../img/green-circle.png) no-repeat 0px top;
+}
+.stop-block input{
+	display: none;
+}
+.stop-description div{
+	font-size: 14px;
+	display: inline-block;
+	width:50%;
+	text-align: center;
+	vertical-align: top;
+}
+.stop-description div h4{
+	font-size: 16px;
+	color:  #0e0e0e;
+	margin:0px;
+}
+.stop-description div span{
+	color:  #9a9a9a;
+	font-size: 13px;
+	font-weight: normal;
+}
+.stop-bottom{
+	background:url(../img/stop-background.png) no-repeat;
+	background-size: 100%;
+	width: 80%;
+    margin: auto;
+    font-size: 0px;
+}
+.stop-bottom div{
+	padding-top:5%;
+	display: inline-block;
+	font-size: 11px;
+	color:  #9a9a9a;
+	font-weight: normal;
+}
+.stop-bottom div:first-child{
+	text-align: left;
+	width: 35%;
+}
+.stop-bottom div:last-child{
+	text-align: right;
+	width: 35%;
+}
+.stop-bottom div:nth-child(2){
+	width: 30%;
+	text-align: center;
 }
 @media(max-width:1920px)
 {
@@ -1549,8 +1665,8 @@ select:invalid{
 	    border-bottom: 1px solid #c4c4c7;
 	}
 	.map-left-block{
-		width: 90%;
-		margin: 0px auto 10%;
+		width: 100%;
+		margin: 0px auto 5%;
 	}
 	.map-button{
 		float:none;
@@ -1563,12 +1679,72 @@ select:invalid{
 	.customer-ad{
 		padding-top: 20px;
 	}
-	.no-routes-block{
+	.no-routes{
 		width:100%;
 		margin:50px auto;
 	}
-	.no-routes-block span{
+	.no-routes span{
 		font-size: 12px;
+	}
+	.map-left-title{
+		width:100%;
+		font-size: 14px;
+		text-align: left;
+		border-bottom: 0px;
+	}
+	.map-left-routes{
+		width:100%;
+		margin: 25px auto 0px;
+		border-bottom: 0px;
+		padding-bottom: 0px;
+		clear:both;
+		overflow: hidden;
+	}
+	.map-left-routes div{
+		width:50%;
+		float:left;
+	}
+	.map-left-routes div:first-child{
+		margin-bottom: 5px;
+	}
+	.map-left-routes label{
+		padding-left: 17px;
+		font-size: 10px;
+		background-size: 14px;
+	}
+	.map-left-routes input:checked + label{
+		background-size: 14px;
+	}
+	.route-status{
+		width:100%;
+		margin:0px;
+	}
+	.route-status p{
+		font-size: 9px;
+		display: inline-block;
+		margin:0px;
+	}
+	.route-status span{
+		font-size: 9px;
+		color:  #989898;
+	}
+	.select-stop{
+		width:100%;
+	}
+	.select-stop h4{
+		font-size: 14px;
+	}
+	.select-stop p{
+		font-size: 11px;
+	}
+	.stop-description div h4 {
+    	font-size: 13px;
+	}
+	.stop-description div span{
+		font-size: 10px;
+	}
+	.mobile-map{
+		display: none;
 	}
 }
 .labelFrom {
