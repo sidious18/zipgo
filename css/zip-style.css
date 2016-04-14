@@ -35,7 +35,6 @@ body
 }
 .navigation-logo
 {
-
 	display: inline-block;
 	float:right;
 	padding: 17px 0px;
@@ -293,6 +292,9 @@ body
 	text-transform: uppercase;
 	background: #000;
 	border-radius:5px;
+}
+.small-black-button{
+	padding:4% 10%;
 }
 .pass-content{
 	width:85%;
@@ -1176,6 +1178,13 @@ select:invalid{
 }
 .map-button .black-button{
 	border-radius: 10px;
+	display: inline-block;
+}
+.map-button a{
+	vertical-align: middle;
+	font-size: 18px;
+	color:#3b3b3b;
+	padding-right: 20px
 }
 .no-routes, .route-status{
 	text-align: center;
@@ -1258,14 +1267,293 @@ select:invalid{
 .stop-bottom div:first-child{
 	text-align: left;
 	width: 35%;
+	padding-left: 6%;
 }
 .stop-bottom div:last-child{
 	text-align: right;
 	width: 35%;
+	padding-right: 6%;
 }
 .stop-bottom div:nth-child(2){
 	width: 30%;
 	text-align: center;
+}
+.map-left-block-cover{
+	width:100%;
+	height:100%;
+	position:absolute;
+	background: rgba(255,255,255,0.6);
+	z-index: 10;
+	top:0px;
+	left:0px;
+}
+.map-right-block{
+	position: absolute;
+	width:35%;
+	height:95%;
+	background: #fff;
+	z-index: 2;
+	right: 20%;
+	top: 0px;
+	margin:1%;
+	overflow: auto;
+	padding: 1% 2.5%;
+}
+.right-block-title{
+	color:  #030202;
+	font-size:16px;
+	text-transform: uppercase;	
+	font-weight: bold;
+}
+.right-block-passes{
+	margin-bottom: 35px;
+}
+.right-block-passes input{
+	display: none;
+}
+.right-block-passes label{
+	display: block;
+	color:  #7b7b7b;
+	font-size:14px;
+	font-weight: normal;
+	padding-left: 25px;
+	background:url(../img/empty-circle.png) no-repeat 0px 4px;
+	background-size: 12px;
+	cursor:pointer;
+}
+.right-block-passes input:checked + label{
+	background:url(../img/green-circle.png) no-repeat 0px 4px;
+	background-size: 12px;
+}
+.right-block-addons{
+	margin-bottom: 20px;
+}
+.right-block-addons input{
+	display: none;
+}
+.right-block-addons label{
+	display: block;
+	background:url(../img/empty-square.png) no-repeat 0px 4px;
+	padding-left: 25px;
+	cursor:pointer;
+	font-size:14px;
+	font-weight: normal;
+	color:  #7b7b7b;
+}
+.right-block-addons input:checked + label{
+	background:url(../img/green-square.png) no-repeat 0px 4px;
+}
+.prefered-time{
+	font-size: 0px;
+	border-top: 1px solid #b2b3b6;
+	border-bottom: 1px solid #b2b3b6;
+	padding:15px 0px;
+	margin-bottom: 22px;
+}
+.prefered-time div{
+	font-size: 14px;
+	display: inline-block;
+	width:50%;
+	vertical-align: top;
+	text-align: center;
+}
+.prefered-time div:first-child{
+	border-right: 1px solid #b2b3b6;
+}
+.prefered-time div p{
+	color:  #7b7b7b;
+	margin:0px 0px 3px;
+}
+.prefered-time div span{
+	color:#000;
+}
+.bottom-text{
+	font-size: 14px;
+	color:  #7b7b7b;
+}
+.confitm-title{
+	text-align: center;
+	padding:2.5% 0px;
+	color:  #000000;
+	font-size: 20px;
+	font-weight: bold;
+}
+.confirm-route{
+	background:#EBEEF1;
+	font-size: 0px;
+	padding:3% 20%;
+}
+.confirm-route div{
+	font-size: 16px;
+	display: inline-block;
+}
+.confirm-route div:first-child{
+	width:45%;
+	text-align: left;
+}
+.confirm-route div:nth-child(2){
+	width:10%;
+	text-align: center;
+	vertical-align: bottom;
+}
+.confirm-route div:nth-child(2) img{
+	cursor:pointer;
+}
+.confirm-route div:last-child{
+	width:45%;
+	text-align: right;
+}
+.confirm-route div{
+	color:  #919090;
+	font-size: 16px;
+}
+.confirm-route div p{
+	color:  #2b2b2b;
+	font-size: 16px;
+	text-transform: uppercase;
+	margin:0 0 5px;
+}
+.confirm-content{
+	width:46%;
+	margin: 2% auto;
+	background:#f2f4f6;
+	padding: 1.5% 3%;
+}
+.confirm-amount-title{
+	color:  #464646;
+	font-size:16px;
+	text-align: center;
+}
+.confirm-amount-price{
+	color: #000000;
+    font-size: 18px;
+    text-align: center;
+    margin: 10px -8% 15px;
+    border-bottom: 1px solid #fff;
+    padding-bottom: 10px;
+}
+.confirm-amount-pass{
+	color:  #0d894d;
+	font-size: 18px;
+	text-align: center;
+}
+.confirm-amount-pay{
+	font-size: 0px;
+}
+.confirm-amount-pay div{
+	display: inline-block;
+	width:50%;
+	color:  #6d6d6d;
+	font-size: 18px;
+}
+.confirm-amount-pay div:first-child{
+	border-right: 1px solid #b5b7b9;
+}
+.confirm-amount-pay div:last-child{
+	text-align: right;
+}
+.confirm-amount-pass{
+	margin-bottom: 20px;
+}
+.confirm-amount-pass p{
+	margin:0px 0px 5px;
+}
+.confirm-benefits{
+	width:45%;
+	margin:auto;
+	padding:0px;
+}
+.confirm-benefits li{
+	color:  #737373;
+	margin-bottom: 10px;
+}
+.confirm-button{
+	width:30%;
+	margin: 8% auto 2%;
+}
+.confirm-button a{
+	vertical-align: middle;
+	font-size: 18px;
+	color: #3b3b3b;
+	padding-right: 60px;
+}
+.confirm-button .black-button{
+	display: inline-block;
+}
+.no-company-welcome{
+	height:115px;
+}
+.pass-date{
+	color:  #000000;
+	text-align: center;
+	font-size: 24px;
+	margin:60px auto 30px;
+	font-weight: bold;
+}
+.small-img-box{
+	padding: 1.5%;
+	width: 40%;
+	margin: 0px auto 0px;
+	position: relative;
+}
+.small-img-box .pass-title{
+	font-size: 14px;
+}
+.small-img-box .pass-company{
+	font-size: 14px;
+}
+.small-img-box .pass-car{
+	width: 40px;
+}
+.small-img-box .pass-number{
+	font-size: 18px;
+	margin-bottom: 15px;
+}
+.small-img-box .pass-name{
+	font-size: 16px;
+}
+.small-img-box .pass-time{
+	font-size: 14px;
+}
+.small-img-box .pass-logo{
+	width:60px;
+}
+.small-img-box .pass-money{
+	font-size: 20px;
+	margin-top: 115px;
+}
+.pass-status{
+	width: 50%;
+	margin: auto;
+	text-align: center;
+	margin: 8% auto 0;
+}
+.pass-status h4{
+	color:  #000000;
+	font-size: 22px;
+	margin-bottom: 20px;
+}
+.pass-status p{
+	color:  #7b7b7b;
+	font-size: 18px;
+}
+.pass-status h5{
+	margin-top: -15px;
+	margin-bottom: 25px;
+	font-size: 16px;
+}
+.discontinue-link{
+	display: block;
+	text-align: center;
+	margin-top:45px;
+	font-size: 16px;
+}
+.discontinue-link a{
+	color:  #767676 !important;
+	border-bottom: 1px solid #f3f3f3;
+}
+.discontinue-link a:hover{
+	text-decoration: none !important;
 }
 @media(max-width:1920px)
 {
@@ -1591,7 +1879,7 @@ select:invalid{
 	}
 	.customer-email{
 		width: 75%;
-		font-size: 9px;
+		font-size: 8px;
 		float:left;
 	}
 	.customer-email .glyphicon-envelope{
@@ -1671,7 +1959,11 @@ select:invalid{
 	.map-button{
 		float:none;
 		margin: 5% auto;
-		width:80%;
+		width:100%;
+		text-align: center;
+	}
+	.map-button a{
+		font-size: 14px;
 	}
 	.map-button .black-button{
 		border-radius: 2px;
@@ -1745,6 +2037,161 @@ select:invalid{
 	}
 	.mobile-map{
 		display: none;
+	}
+	.map-right-block{
+		position: relative;
+		width:100%;
+		height:auto;
+		right:0px;
+	}
+	.right-block-title{
+		font-size: 13px;
+	}
+	.right-block-passes label{
+		font-size: 12px;
+	}
+	.right-block-addons{
+		margin-top:15px;
+	}
+	.right-block-addons label{
+		font-size: 13px;
+	}
+	.right-block-passes {
+	    margin-bottom: 20px;
+	}
+	.prefered-time{
+		margin-top: 15px;
+		padding: 10px 0px;
+		margin-bottom: 10px;
+	}
+	.prefered-time div{
+		font-size: 12px;
+	}
+	.bottom-text{
+		font-size: 12px;
+		text-align: center;
+	}
+	.confitm-title{
+		text-align: left;
+		padding: 5.5% 0px 8%;
+		color: #000000;
+		font-size: 12px;
+		border-bottom: 2px solid #EBEEF1;
+	}
+	.confirm-route{
+		padding:0 5%;
+		background:#fff;
+	}
+	.confirm-route div{
+		vertical-align: top;
+	}
+	.confirm-route div:nth-child(2) {
+		vertical-align: middle;
+	}
+	.confirm-route div p{
+		font-size: 12px;
+	}
+	.confirm-route div{
+		font-size: 9px;
+	}
+	.confirm-route div:nth-child(2) img{
+		width:80%;
+	}
+	.confirm-content{
+		width: auto;
+		padding: 1.5% 3%;
+		margin-right: -5px;
+		margin-left: -5px;
+		margin-top: 40px;
+	}
+	.confirm-amount-title{
+		font-size: 8px;
+		padding-top: 5px;
+	}
+	.confirm-amount-price{
+		font-size: 12px;
+		margin: 5px -8% 5px;
+		padding-bottom: 10px;
+	}
+	.confirm-amount-pass {
+	    margin-bottom: 10px;
+	    font-size: 12px;
+	}
+	.confirm-amount-pass p{
+		font-size: 12px;
+		margin:0px;
+	}
+	.confirm-amount-pay div{
+		font-size: 10px;
+	}
+	.confirm-benefits {
+   		width: 94%;
+   		font-size: 10px;
+   		margin: 15% auto;
+   	}
+   	.confirm-benefits li{
+   		margin-bottom: 5px;
+   	}
+   	.confirm-button{
+   		width:94%;
+   		margin: 0px auto 5%;
+		text-align: center;
+   	}
+	.confirm-button a{
+		font-size: 14px;
+		padding-right: 15px;
+	}
+	.pass-date{
+		font-size: 14px;
+	}
+	.small-img-box {
+	    padding: 4.5%;
+	    width:90%;
+	}
+	.small-img-box .pass-title {
+	    font-size: 9px;
+	}
+	.small-img-box .pass-company{
+		display: block;
+		font-size: 9px;
+		margin-bottom: 10px;
+	}
+	.small-img-box .pass-number {
+	    font-size: 12px;
+	}
+	.small-img-box .pass-name{
+		display: block;
+		font-size: 10px;
+	}
+	.small-img-box .pass-time {
+	    font-size: 9px;
+	}
+	.small-img-box .pass-car{
+		margin:0px 0px 5px;
+		width:30px;
+	}
+	.small-img-box .pass-money{
+		margin-top:75px;
+		font-size: 12px;
+	}
+	.small-img-box .pass-logo {
+	    width: 40px;
+	}
+	.pass-status{
+		width: 100%;
+		margin: 8% auto 25%;
+	}
+	.pass-status p{
+		font-size: 11px;
+	}
+	.pass-status h4{
+		margin-bottom: 30px;
+		margin-top: 35px;
+		font-size: 12px;
+	}
+	.no-company-welcome{
+		height:0px;
+		margin-top: 0px;
 	}
 }
 .labelFrom {
