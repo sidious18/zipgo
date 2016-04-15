@@ -291,10 +291,11 @@ body
 	display: block;
 	text-transform: uppercase;
 	background: #000;
-	border-radius:5px;
+	border-radius: 15px;
+	border: 0px;
 }
 .small-black-button{
-	padding:4% 10%;
+	padding: 20px 40px;
 }
 .pass-content{
 	width:85%;
@@ -1468,8 +1469,18 @@ select:invalid{
 	margin-bottom: 10px;
 }
 .confirm-button{
-	width:30%;
+	width:50%;
 	margin: 8% auto 2%;
+	text-align: center;
+}
+.confirm-only-back{
+	text-align: right;
+}
+.confirm-only-back .black-button{
+	display: none !important;
+}
+.confirm-only-back a{
+	padding-right:0px !important;
 }
 .confirm-button a{
 	vertical-align: middle;
@@ -1537,6 +1548,9 @@ select:invalid{
 	color:  #7b7b7b;
 	font-size: 18px;
 }
+.pass-status p:nth-child(4){
+	margin:0px;
+}
 .pass-status h5{
 	margin-top: -15px;
 	margin-bottom: 25px;
@@ -1554,6 +1568,212 @@ select:invalid{
 }
 .discontinue-link a:hover{
 	text-decoration: none !important;
+}
+.pass-links{
+	overflow:hidden;
+	color:  #838383;
+	font-size: 16px;
+	width: 40%;
+	margin:15px auto -40px;
+	padding:0px 10px;
+}
+.pass-links a:first-child{
+	float:left;
+	text-decoration: underline;
+	background:url(../img/eye.png) no-repeat 0px 7px;
+	padding-left: 25px;
+	color: #838383 !important;
+}
+.pass-links input{
+	display: none;
+}
+.pass-links input:checked + label{
+	background:url(../img/on-icon.png) no-repeat right 3px;
+	background-size: 35px;
+}
+.pass-links label{
+	float:right;
+	background:url(../img/off-icon.png) no-repeat right 3px;
+	background-size: 35px;
+	padding-right: 45px;
+	color: #838383 !important;
+	font-weight: normal;
+	cursor:pointer;
+}
+.discontinue-edit-links{
+	width:50%;
+	margin: 45px auto 0px;
+	overflow:hidden;
+}
+.discontinue-edit-links a{
+	color:  #3b3b3b !important;
+	font-size: 16px;
+	text-decoration: underline;
+}
+.discontinue-edit-links a:first-child{
+	float:left;
+}
+.discontinue-edit-links a:last-child{
+	float:right;
+}
+.full-pass-content{
+	overflow:hidden;
+	width:80%;
+	margin:auto;
+}
+.full-pass-content .pass-home-work{
+	float:left;
+	width:50%;
+}
+.full-pass-content .pass-img-box{
+	float:right;
+}
+.pass-home{
+	margin-top:5%;
+	margin-bottom: 15%;
+}
+.pass-home ,.pass-work{
+	font-size: 0px;
+}
+.pass-home div ,.pass-work div{
+	font-size: 16px;
+	display: inline-block;
+	color:  #000000;
+}
+.pass-home div:first-child ,.pass-work div:first-child{
+	vertical-align: top;
+	width:24%;
+	text-align: center;
+	color:  #807f7f;
+}
+.pass-home div:last-child, .pass-work div:last-child{
+	width:76%;
+}
+.pass-home div:last-child p,.pass-work div:last-child p{
+	color:  #000000;
+	font-size: 18px;
+	margin:0px;
+	font-weight: bold;
+}
+#pass-map{
+	height:300px;
+	width:100%;
+}
+.pass-map-box{
+	position: relative;
+	margin-top:30px;
+}
+.pass-map-block{
+	position: absolute;
+	width:30%;
+	height:260px;
+	left:13%;
+	background:#fff;
+	z-index: 3;
+	padding:2%;
+}
+.pass-timings{
+	color:  #757575;
+	margin-bottom: 15px;
+}
+.pass-time-stop{
+	color:  #000000;
+}
+.pass-route{
+	color:  #000000;
+	margin-bottom: 40px;	
+}
+.pass-stop{
+	color:#000;
+}
+.pass-route2P{
+	color:#000;
+}
+.pass-terms{
+	width:70%;
+	margin:auto;
+}
+.pass-terms{
+	position: relative;
+	margin:30px auto 50px;
+}
+.pass-terms a{
+	position: absolute;
+	bottom:0px;
+	right:0px;
+	color:  #3b3b3b !important;
+	font-size: 16px;
+}
+.pass-terms ul{
+	padding:0px 55px 0px 0px;
+}
+.pass-terms h4{
+	color:#3b3b3b;
+	margin-bottom: 20px;
+}
+.pass-terms ul li{
+	margin-bottom: 5px;
+	color:  #5b5b5b;
+}
+.pass-now-future{
+	width:100%;
+	font-size: 0px;
+}
+.pass-now-future > div{
+	display: inline-block;
+	width:50%;
+	vertical-align: top;
+}
+.pass-now-future .pass-img-box{
+	width:70%;
+}
+.pass-now-future-top{
+	position: relative;	
+}
+.pass-now-future > div:first-child{
+	position: relative;
+	left:50%;
+}
+.pass-now-future > div:last-child{
+	position: relative;
+	right:50%;
+	border-right:1px solid #d1d1d1;
+}
+.pass-now-future > div h4{
+	text-align: center;
+}
+.pass-now-future > div h3{
+	text-align: center;
+	font-weight: bold;
+}
+.pass-now-future-description{
+	width:80%;
+	margin:10% auto 0;
+}
+.pass-now-future-description p{
+	color:  #7b7b7b;
+	font-size: 14px;
+	text-align: center;
+	margin-bottom: 18%;
+}
+.details-link{
+	position: absolute;
+	bottom:10px;
+	right: 16%;
+	color:  #909090 !important;
+	font-size: 14px;
+	bottom: -30px;
+	background:url(../img/eye.png) no-repeat 0px 5px;
+	padding-left: 27px;
+}
+.pass-now-future-link {
+	text-align: right;
+	width: 94%;
+	margin: 6% 0;
+}
+.pass-now-future-link a{
+	color:  #3b3b3b !important;
+	font-size: 18px;
 }
 @media(max-width:1920px)
 {
@@ -2143,6 +2363,7 @@ select:invalid{
 	}
 	.pass-date{
 		font-size: 14px;
+		margin: 20px auto;
 	}
 	.small-img-box {
 	    padding: 4.5%;
@@ -2192,6 +2413,186 @@ select:invalid{
 	.no-company-welcome{
 		height:0px;
 		margin-top: 0px;
+	}
+	.pass-links{
+		font-size: 11px;
+		width: 100%;
+		margin: 15px auto -15px;
+		padding: 0px 15px;
+	}
+	.pass-links a:first-child{
+		background: url(../img/eye.png) no-repeat 0px 5px;
+		padding-left: 20px;
+		background-size: 15px;
+	}
+	.pass-links label{
+		background: url(../img/off-icon.png) no-repeat right 0px;
+		background-size: 25px;
+		padding-right: 30px;
+	}
+	.pass-links input:checked + label{
+		background: url(../img/on-icon.png) no-repeat right 0px;
+		background-size: 25px;
+	}
+	.pass-status h5{
+		font-size: 11px;
+		margin-top:-23px;
+	}
+	.discontinue-link{
+		text-align: center;
+		width:70%;
+		margin: -50px auto 25px;
+	}
+	.discontinue-link a{
+		font-size:12px;
+		position: relative;
+		right: 70px;
+	}
+	.small-black-button {
+	    padding: 7px 13px;
+	    font-size: 12px;
+	}
+	.black-button{
+		border-radius: 5px;
+	}
+	.discontinue-edit-links{
+		width:94%;
+		margin: -50px auto 50px;
+	}
+	.discontinue-edit-links a{
+		font-size: 12px;
+	}
+	.full-pass-content{
+		width:100%;
+		float:none;
+	}
+	.full-pass-content .pass-home-work{
+		float:none;
+		width:100%;
+	}
+	.pass-home div:first-child, .pass-work div:first-child{
+		font-size: 12px;
+		text-align: left;
+		width: 21%;
+	}
+	.pass-home div:last-child p, .pass-work div:last-child p{
+		font-size: 12px;
+	}
+	.pass-home div, .pass-work div{
+		font-size: 11px;
+	}
+	.pass-home {
+	    margin-top: 0%;
+	    margin-bottom: 5%;
+	}
+	.full-pass-content .pass-img-box{
+		display: none;
+	}
+	.pass-map-block{
+		position: relative;
+		width: 100%;
+		left: 0%;
+	}
+	.pass-map-block{
+		padding:0px;
+		height:auto;
+	}
+	.pass-timings{
+		font-size: 12px;
+	}
+	.pass-time-stop{
+		font-size: 12px;
+		padding-left: 21%;
+		margin: 0 0 5px;
+	}
+	.pass-route{
+		font-size: 12px;
+		padding-left:21%;
+		margin:0 0 5px;
+	}
+	.pass-stop{
+		padding-left: 21%;
+		margin:0 0 5px;
+	}
+	.pass-route2{
+		font-size: 12px;
+		padding-left:21%;
+	}
+	#pass-map{
+		width:auto;
+		margin-left:-15px;
+		margin-right: -15px;
+		height:220px;
+	}
+	.pass-terms{
+		width:100%;
+		margin:15px auto 30px;
+	}
+	.pass-terms h4{
+		font-size: 12px;
+		margin-bottom: 10px;
+	}
+	.pass-terms ul{
+		padding: 0px 0px 0px 10px;
+	}
+	.pass-terms ul li{
+		font-size: 10px;
+		margin-bottom: 3px;
+	}
+	.pass-terms a{
+		bottom:-20px;
+		font-size: 12px;
+	}
+	.pass-now-future > div:first-child{
+		border-bottom: 1px solid #d1d1d1;
+		margin-bottom: 8%
+	}
+	.pass-now-future > div:last-child{
+		border:none;
+	}
+	.pass-now-future > div:first-child, .pass-now-future > div:last-child{
+		position: static;
+		width:100%;
+	}
+	.pass-now-future > div h4{
+		font-size: 14px;
+	}
+	.pass-now-future .pass-img-box {
+	    width: 90%;
+	}
+	.pass-now-future > div h3{
+		font-size: 14px;
+		margin-top:20px;
+		margin-bottom: 5px;
+	}
+	.pass-now-future > div h4{
+		font-size: 12px;
+		margin-top:0px;
+	}
+	.details-link{
+	    bottom: 10px;
+	    right: 6%;
+	    font-size: 10px;
+	    bottom: -20px;
+	    background: url(../img/eye.png) no-repeat 0px 2px;
+	    padding-left: 21px;
+	    background-size: 17px;
+	}
+	.pass-now-future-description{
+		width:100%;
+	}
+	.pass-now-future-description p{
+		font-size: 10px;
+		margin-bottom: 5%;
+	}
+	.pass-now-future-link{
+		width:100%;
+		margin:0px;
+		position: relative;
+	    top: -24px;
+	}
+	.pass-now-future-link a{
+		font-size: 12px;
 	}
 }
 .labelFrom {

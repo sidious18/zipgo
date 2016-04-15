@@ -15,36 +15,6 @@
   <link rel="stylesheet" href="css/jquery-ui.min.css">
 </head>
 <body>
-  <script>
-      function initMap() {
-         var latLng = new google.maps.LatLng(49.47805, -123.84716);
-         var map = new google.maps.Map(document.getElementById('tracking-map'), {
-           zoom: 12,
-           center: latLng,
-           scrollwheel: false,
-           disableDefaultUI: true
-         });
-         var markerFrom = new MarkerWithLabel({
-           position: new google.maps.LatLng(49.49605, -123.84716),
-           map: map,
-           labelContent: "ECC",
-           labelAnchor: new google.maps.Point(25, 65),
-           labelClass: "labelFrom", 
-           icon: "img/label-from.png"
-         });
-         var markerTo = new MarkerWithLabel({
-           position: new google.maps.LatLng(49.475, -123.84),
-           map: map,
-           labelContent: "MRTL",
-           labelAnchor: new google.maps.Point(25, 60),
-           labelClass: "labelTo", 
-           icon: "img/label-to.png"
-         });
-       }
-       jQuery(document).ready(function($) {
-         initMap();
-       });
-    </script>
   <nav class="navigation">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -84,192 +54,52 @@
     </div>
   </nav>
   <div class="container content">
-    <div class="welcome welcome-map">
-      <img src="img/csg-top.png" alt="Csg-top" class="welcome-image">
+    <div class="welcome no-company-welcome">
     </div>
-    <div class="customer-info">
-      <p class="customer-name"><img src="img/user.png" alt="User">Deepthi Mehta</p>
-      <p class="customer-email"> <span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>deepthi.mehta@cnginternational.com</p>
-      <p class="customer-ad">Enroll before 26 April 2016 to get the pass for May 2016</p>
+    <h4 class="pass-date">PASS FOR JANUARY 2016</h4>
+    <div class="pass-img-box small-img-box">
+      <div class="pass-left">
+        <p class="pass-title">ZIPGO PASS</p>
+        <p class="pass-company">CNG INTERNATIONAL</p>
+        <img src="img/yellow-car.png" alt="Yellow car" class="pass-car">
+        <p class="pass-number">4160 2104 0205 5993</p>
+        <p class="pass-name">DEEPTHY MEHTHA</p>
+        <p class="pass-time"><span>VALIDITY</span> 01/JAN/16 - 31/JAM/16</p>
+      </div>
+      <div class="pass-right">
+        <img src="img/zip-logo.png" alt="Zip Logo" class="pass-logo">
+        <p class="pass-money">₹4800</p>
+      </div>
     </div>
-    <div class="customer-instructions">
-      <h4>
-        SELECT HOME AND OFFICE
-      </h4>
+    <div class="pass-links">
+      <a href="#">View Details</a>
+      <input type="checkbox" id="renew">
+      <label for="renew">Auto-Renew</label>
+    </div>
+    <div class="pass-status">
+      <h4>Pass Active</h4>
+      <h5>Consumed: ₹1200</h5>
       <p>
-        We will fetch the right stop for you
+        Post ride limit consumption for the month, non discounted fare
+will apply on all routes
+      </p>
+      <p>
+        To continue your pass for Febuary 2016
+      </p>
+      <p>
+        Please renew and pay before 24 th January 2016
       </p>
     </div>
-    <div class="row map-container">
-      <div class="map-left-block hidden-xs">
-        <div class="map-left-block-cover"></div>
-        <table class="stop-table">
-          <tr>
-            <td>
-              <img src="img/home.png" alt="Home">
-            </td>
-            <td>
-              <p>HOME</p>
-              <div class="input-group" id="home-input-box">
-                <input type="text" class="form-control" placeholder="Sony World Junction, Koramangala" id="home-input">
-                <span class="input-group-addon" id="basic-addon2"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span></span>
-              </div>
-            </td>
-          </tr>
-        </table>
-        <table class="stop-table">
-          <tr>
-          <td>
-            <img src="img/case.png" alt="Case">
-          </td>
-          <td>
-            <p>WORK</p>
-            <div class="input-group" id="work-input-box">
-              <input type="text" class="form-control" placeholder="Select work Location" id="work-input">
-              <span class="input-group-addon" id="basic-addon2"><span class="glyphicon glyphicon-triangle-bottom" aria-hidden="true"></span></span>
-            </div>
-          </td>
-          </tr>
-        </table>
-        <div class="select-stop">
-          <h4>Select stop</h4>
-          <p>We will fetch you the fare details</p>
-        </div>
-        <div class="stop-block">
-          <input type="radio" id="stop1" name="stops">
-          <label for="stop1">
-            <div class="stop-description">
-              <div>
-                <h4>Sony World junction</h4>
-                <span>(croma, oasis mall)</span>
-              </div>
-              <div>
-                <h4>CSG International</h4>
-                <span>( Cessna Business Park )</span>
-              </div>
-            </div>
-            <div class="stop-bottom">
-              <div>
-                3 min
-              </div>
-              <div>
-                32 min
-              </div>
-              <div>
-                3 min
-              </div>
-            </div>
-          </label>
-        </div>
-        <div class="stop-block">
-          <input type="radio" id="stop2" name="stops">
-          <label for="stop2">
-            <div class="stop-description">
-              <div>
-                <h4>Sony World junction</h4>
-                <span>(croma, oasis mall)</span>
-              </div>
-              <div>
-                <h4>CSG International</h4>
-                <span>( Cessna Business Park )</span>
-              </div>
-            </div>
-            <div class="stop-bottom">
-              <div>
-                3 min
-              </div>
-              <div>
-                32 min
-              </div>
-              <div>
-                3 min
-              </div>
-            </div>
-          </label>
-        </div>
-        <div class="stop-block">
-          <input type="radio" id="stop3" name="stops">
-          <label for="stop3">
-            <div class="stop-description">
-              <div>
-                <h4>Sony World junction</h4>
-                <span>(croma, oasis mall)</span>
-              </div>
-              <div>
-                <h4>CSG International</h4>
-                <span>( Cessna Business Park )</span>
-              </div>
-            </div>
-            <div class="stop-bottom">
-              <div>
-                3 min
-              </div>
-              <div>
-                32 min
-              </div>
-              <div>
-                3 min
-              </div>
-            </div>
-          </label>
-        </div>
-      </div>
-      <div class="map-right-block">
-        <h4 class="right-block-title">
-          PASS TYPE
-        </h4>
-        <div class="right-block-passes">
-          <input type="radio" id="pass-type1" name="pass-type" selected>
-          <label for="pass-type1">
-            2 Way Ride (44Rides)
-          </label>
-          <input type="radio" id="pass-type2" name="pass-type">
-          <label for="pass-type2">
-            Home - Office (22 Rides)
-          </label>
-          <input type="radio" id="pass-type3" name="pass-type">
-          <label for="pass-type3">
-            Office - Home (22 rides)
-          </label>
-        </div>
-        <h4 class="right-block-title">
-          ADD ON
-        </h4>
-        <div class="right-block-addons">
-          <input type="checkbox" id="addon1">
-          <label for="addon1">
-            Enroll automatic Booking Rs 49 (Rs99)
-          </label>
-          <input type="checkbox" id="addon2">
-          <label for="addon2">
-            Daily Newspaper
-          </label>
-        </div>
-        <h4 class="right-block-title">
-          YOUR PREFERRED TIME
-        </h4>
-        <div class="prefered-time">
-          <div>
-            <p>Reach Work by</p>
-            <span>8:30AM</span>
-          </div>
-          <div>
-            <p>Leave Work by</p>
-            <img src="img/three-dots.png" alt="Three dots">
-          </div>
-        </div>
-        <p class="bottom-text">
-          Estimated Pickup Time From Home: 7:00 AM
-        </p>
-      </div>
-      <div id="tracking-map" class="mobile-map"></div>
+    <div class="discontinue-edit-links">
+      <a href="#">Edit pass preference</a>
+      <a href="#">Discontinue</a>
     </div>
-    <div class="map-button">
+    <div class="confirm-button confirm-only-back">
       <a href="#"><span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span>Back</a>
-      <input type="submit" class="black-button" value="Confirm">
+      <input class="black-button small-black-button" value="Renew pass" type="submit">
     </div>
   </div>
-  
+
   <!--Signin Modal -->
   <div id="SignInModal" class="modal fade" role="dialog">
     <div class="modal-dialog constant-modal-height">
