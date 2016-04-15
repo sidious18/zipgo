@@ -231,6 +231,8 @@ body
 	padding:3%;
 	background:url(../img/pass-background.png) no-repeat;
 	background-size: 100% 100%;
+	width:80%;
+	margin:auto;
 }
 .pass-left{
 	float:left;
@@ -284,21 +286,21 @@ body
 	margin-bottom: 0px
 }
 .black-button{
-	padding:4% 16%;
+	padding:2% 16%;
 	color:  #ffffff;
 	font-size:20px;
 	margin:auto;
 	display: block;
 	text-transform: uppercase;
 	background: #000;
-	border-radius: 15px;
+	border-radius: 5px;
 	border: 0px;
 }
 .small-black-button{
 	padding: 20px 40px;
 }
 .pass-content{
-	width:85%;
+	width:100%;
 }
 .signin-modal-header{
 	text-align: center;
@@ -581,6 +583,7 @@ select:invalid{
 }
 .profile-inputs p:first-child input{
 	margin:55px 0px 20px;
+	background: inherit;
 }
 .profile-email{
 	background: url(../img/mail.png) no-repeat;
@@ -609,7 +612,12 @@ select:invalid{
 	border-right: 6px solid transparent !important;
 	border-left: 6px solid transparent !important;
 	float:right;
-	margin-top:-12px;
+	margin-top:5px;
+}
+@-moz-document url-prefix() {
+    .profile-city button .caret{
+		margin-top:-12px;
+	}
 }
 @media(min-width:768px){
   .signin-modal-content{
@@ -1948,7 +1956,7 @@ select:invalid{
 	.welcome-des{
 		font-size: 11px;
 		margin-top:10px;
-		margin-bottom: 30px;
+		margin-bottom: 5px;
 	}
 	.pass-description{
 		width:100%;
@@ -1993,6 +2001,7 @@ select:invalid{
 	}
 	.welcome{
 		margin-top: 30px;
+	    background-size: 105%;
 	}
 	.ride-block{
 		width:100%;
@@ -2199,7 +2208,7 @@ select:invalid{
 		font-size: 12px;
 	}
 	.map-left-title{
-		width:100%;
+		width:90%;
 		font-size: 14px;
 		text-align: left;
 		border-bottom: 0px;
@@ -2215,6 +2224,7 @@ select:invalid{
 	.map-left-routes div{
 		width:50%;
 		float:left;
+	    text-align: center;
 	}
 	.map-left-routes div:first-child{
 		margin-bottom: 5px;
