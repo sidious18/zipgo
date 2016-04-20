@@ -551,28 +551,37 @@ select:invalid{
 }
 .profile-table{
 	width:75%;
+	font-size: 0px;
 }
 .profile-table tr td{
 	vertical-align: top;
 }
 .avatar-cell{
 	width:22%;
+	font-size: 14px;
+	display: inline-block;
+	vertical-align: top;
 }
 .avatar-cell img{
 	width:100%;
 }
 .profile-info{
-	padding-left: 2%;
+	margin-left: 2%;
+	width:76%;
+	font-size: 14px;
+	display: inline-block;
 }
 .profile-edit{
 	text-align: right;
+	padding-top: 8%;
 }
 .profile-edit a{
 	border-bottom: 1px dotted #ccc;
 	color:  #4d4c4c !important;
-}
-.profile-edit a{
 	text-decoration: none !important;
+}
+.profile-inputs{
+	margin-top: -8%;
 }
 .profile-inputs input{
 	border:none;
@@ -912,6 +921,7 @@ select:invalid{
 .company-dropdown #company-city-button{
 	width:100% !important;
 	text-align: center;
+	border:none;
 }
 .company-dropdown .ui-selectmenu-text{
 	text-align: center !important;
@@ -945,11 +955,26 @@ select:invalid{
 	font-size: 0;
 	margin: 7% auto 12%;
 	clear:both;
+	padding:0px;
 }
 .company-list li{
 	display: inline-block;
 	width:25%;
 	margin-bottom: 3%;
+}
+.company-list li label img{
+	cursor:pointer;
+}
+.company-list li input{
+	display: none;
+}
+.company-list li label{
+	background:url(../img/empty-circle.png) no-repeat center left;
+	width:100%;
+	padding-left: 30px;
+}
+.company-list li input:checked + label{
+	background:url(../img/success-circle.png) no-repeat center left;
 }
 .request-company{
 	font-size:0;
@@ -976,7 +1001,16 @@ select:invalid{
 }
 .company-done a{
 	color:#B7B7B9 !important;
-	margin-right:50px;
+}
+.company-done{
+	text-align: center;
+}
+.company-done .black-button{
+	display: inline-block;
+	padding:10px 60px;
+}
+.company-done a{
+	margin-right:5%;
 }
 .verify-company-img{
 	margin: 3% 0px 8%;
@@ -1783,6 +1817,10 @@ select:invalid{
 	color:  #3b3b3b !important;
 	font-size: 18px;
 }
+.tracking-name{
+	width:100%;
+	display:block;
+}
 @media(max-width:1920px)
 {
 	.navigation
@@ -1954,7 +1992,7 @@ select:invalid{
 		font-size: 20px;
 	}
 	.welcome-des{
-		font-size: 11px;
+		font-size: 10px;
 		margin-top:10px;
 		margin-bottom: 5px;
 	}
@@ -2001,7 +2039,7 @@ select:invalid{
 	}
 	.welcome{
 		margin-top: 30px;
-	    background-size: 105%;
+	    background-size: 208px;
 	}
 	.ride-block{
 		width:100%;
@@ -2608,6 +2646,172 @@ select:invalid{
 	}
 	.pass-now-future-link a{
 		font-size: 12px;
+	}
+	.company-list{
+		width:85%;
+	    margin: 25% auto 25%;
+	}
+	.company-list li{
+	    width: 33%;
+	}
+	.company-list li label img{
+		max-width: 100%;
+		height: 20px;
+	}
+	.company-list li{
+		vertical-align: top;
+		margin-bottom: 9%;
+	}
+	.company-list li label{
+		background-size: 10px;
+		padding-left: 15px;
+	}
+	.company-list li input:checked + label{
+		background-size: 10px;
+	}
+	.company-select{
+		font-size: 11px;
+		margin-top:20px;
+	}
+	.company-select:before {
+	    width: 10px;
+	    height: 16px;
+	    margin-right: 6px;
+	    background-size: 100%;
+	}
+	.company-dropdown{
+		font-size:10px;
+	    margin-top: 20px;
+	}
+	.company-dropdown #company-city-button{
+		border:none;
+	}
+	.request-company{
+		display: none;
+	}
+	.company-done a{
+		color:#B7B7B9 !important;
+		float:left;
+		padding-top: 10px;
+	}
+	.company-done{
+		overflow:hidden;
+		width:80%;
+		margin:auto;
+	}
+	.company-done .black-button{
+		padding:10px 40px;
+		float:right;
+	}
+	.avatar-cell{
+		width:30%;
+	    margin: 10% auto 0%;
+		display: block;
+	}
+	.profile-table{
+		width:100%;
+	}
+	.profile-info{
+		margin:0px;
+		width:100%;
+	}
+	.profile-inputs p:first-child input{
+		padding: 5px 35px 5px 5px;
+		margin:0px;
+	}
+	.profile-inputs{
+	    width: 85%;
+	    margin: 0px auto 15%
+	}
+	.profile-edit{
+		position:relative;
+		top:25px;
+		margin:0px;
+		padding:0px;
+		right:8%;
+	}
+	.profile-edit a{
+		border-bottom:0px;
+	}
+	.profile-inputs input{
+	    font-size: 12px;
+        padding: 5px 0px 5px 20px;
+	}
+	.profile-email{
+		background-position: 0px 7px;
+		background-size: 16px;
+	}
+	.profile-password{
+	    background-position: 0px 3px;
+    	background-size: 14px;
+	}
+	.profile-phone{
+	    background-position: 0px 8px;
+	    background-size: 14px;
+	}
+	.profile-city button{
+		font-size: 12px;
+		padding: 5px 0px 5px 20px;
+	    background-position: 1px 3px !important;
+	}
+	.left-tracking, .right-tracking{
+		width:100%;
+		float:none;
+	}
+	.tracking-confirmation{
+	    margin: 10% 0px 2%;
+	}
+	.tracking-confirmation li{
+		font-size: 11px;
+	}
+	.tracking-name{
+		display: inline;
+	}
+	.tracking-confirmation li:last-child{
+		padding-top: 2.5%;
+	}
+	.tracking-route{
+		margin:3% auto 0;
+	}
+	.tracking-route li:last-child{
+		font-size: 11px;
+		padding-left: 3.8%;
+	}
+	.car-number{
+	    width: 60%;
+	    float: left;
+	}
+	.car-type{
+		float:right;
+		width:40%;
+	}
+	.car-number li:first-child {
+	    width: 14%;
+		padding: 0 4.5% 0 0;
+	}
+	.car-number li{
+		font-size: 12px;
+	}
+	.car-type li{
+		font-size: 11px;
+		text-align: center;
+	}
+	.car-type li:first-child, .car-type li:last-child{
+		width:100%;
+		position:relative;
+	}
+	.car-type li:first-child{
+		top:15px;
+	}
+	.car-type li:last-child{
+		bottom:15px;
+	}
+	.right-tracking{
+		overflow:hidden;
+		margin:2.5% auto 5%;
+	}
+	.left-tracking{
+		border-bottom:1px solid #cdcccc;
 	}
 }
 .labelFrom {
