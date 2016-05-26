@@ -1521,7 +1521,7 @@ select:invalid{
 	text-align: center;
 }
 .confirm-only-back{
-	text-align: right;
+	text-align: left;
 }
 .confirm-only-back .black-button{
 	display: none !important;
@@ -1747,8 +1747,8 @@ select:invalid{
 }
 .pass-terms a{
 	position: absolute;
-	bottom:0px;
-	right:0px;
+	bottom:-25px !important;
+	left:0px;
 	color:  #3b3b3b !important;
 	font-size: 16px;
 }
@@ -1817,7 +1817,10 @@ select:invalid{
 .pass-now-future-link {
 	text-align: right;
 	width: 94%;
-	margin: 6% 0;
+	margin: 0 0 6%;
+}
+.pass-now-future-link input{
+	margin: 1% 0px 8% 20%;
 }
 .pass-now-future-link a{
 	color:  #3b3b3b !important;
@@ -1891,6 +1894,9 @@ select:invalid{
 	.navigation-logo-bottom
 	{
 		font-size: 9px;
+	}
+	.pass-now-future-link input{
+		margin: 1% 0px 5% 18%;
 	}
 }
 @media(max-width:767px)
@@ -2855,6 +2861,21 @@ select:invalid{
 	}
 	.profile-dropdown + .dropdown-menu li a{
 		padding: 7px 0px 7px 0px !important;
+	}
+	.pass-now-future-link{
+		text-align: center;
+		overflow: hidden;
+		width: 80%;
+		margin: 10% auto 3%;
+	}
+	.pass-now-future-link input{
+		margin:inherit;
+		display: inline-block;
+		float:right;
+	}
+	.pass-now-future-link a{
+		float: left;
+		margin-top: 13%;
 	}
 }
 .labelFrom {
