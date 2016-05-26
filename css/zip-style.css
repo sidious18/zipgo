@@ -1,6 +1,6 @@
 @font-face {
     font-family: ProximaNova;
-    src: url("../fonts/Proxima-nova.otf") format("opentype");
+    src: url("../fonts/Proxima-nova.ttf") format("opentype");
     font-weight: 400;
     font-style: normal;
 }
@@ -1865,7 +1865,7 @@ select:invalid{
 	.nav{width: auto;}
 	.navigation-logo-menu
 	{
-		padding: 13px 0px 13px 115px;
+		padding: 13px 0px 13px 40px;
 		margin:0px;
 		width: 50%;
 
