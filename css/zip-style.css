@@ -1773,7 +1773,7 @@ select:invalid{
 	vertical-align: top;
 }
 .pass-now-future .pass-img-box{
-	width:70%;
+	width:85%;
 }
 .pass-now-future-top{
 	position: relative;	
@@ -1807,7 +1807,7 @@ select:invalid{
 .details-link{
 	position: absolute;
 	bottom:10px;
-	right: 16%;
+	right: 8%;
 	color:  #909090 !important;
 	font-size: 14px;
 	bottom: -30px;
@@ -2630,6 +2630,7 @@ select:invalid{
 	}
 	.pass-now-future .pass-img-box {
 	    width: 90%;
+	    max-width: 350px;
 	}
 	.pass-now-future > div h3{
 		font-size: 14px;
@@ -2641,13 +2642,20 @@ select:invalid{
 		margin-top:0px;
 	}
 	.details-link{
-	    bottom: 10px;
-	    right: 6%;
+	    bottom: auto;
+	    right: auto;
 	    font-size: 10px;
 	    bottom: -20px;
 	    background: url(../img/eye.png) no-repeat 0px 2px;
 	    padding-left: 21px;
 	    background-size: 17px;
+	    width: 90%;
+	    max-width: 350px;
+	    position: relative;
+	    margin: auto;
+	    display: block;
+	    text-align: right;
+	    background-position-x: 82%;
 	}
 	.pass-now-future-description{
 		width:100%;
