@@ -266,22 +266,22 @@ html{
 	margin-bottom: 15px;
 }
 .pass-number{
-	font-size: 20px;
+	font-size: 16px;
 	color:#fff;
 	margin-bottom: 35px;
 }
 .pass-name{
-	font-size:20px;
+	font-size:16px;
 	color:#fff;
 	text-shadow: 0px 1px 2px rgba(33, 33, 33, 0.64);
 }
 .pass-time{
 	margin:0px;
-	font-size:20px;
+	font-size:16px;
 	color:#fff;
 }
 .pass-time span{
-	font-size: 20px;
+	font-size: 16px;
 	color:  #1d5a3b;
 }
 .pass-logo{
@@ -1564,30 +1564,30 @@ select:invalid{
 	position: relative;
 }
 .small-img-box .pass-title{
-	font-size: 14px;
+	font-size: 16px;
 }
 .small-img-box .pass-company{
-	font-size: 14px;
+	font-size: 16px;
 }
 .small-img-box .pass-car{
 	width: 40px;
 }
 .small-img-box .pass-number{
-	font-size: 18px;
+	font-size: 16px;
 	margin-bottom: 15px;
 }
 .small-img-box .pass-name{
 	font-size: 16px;
 }
 .small-img-box .pass-time{
-	font-size: 14px;
+	font-size: 16px;
 }
 .small-img-box .pass-logo{
 	width:60px;
 }
 .small-img-box .pass-money{
-	font-size: 20px;
-	margin-top: 115px;
+	font-size: 16px;
+	margin-top: 120px;
 }
 .pass-status{
 	width: 50%;
@@ -2027,7 +2027,7 @@ select:invalid{
 		font-size: 12px;
 	}
 	.pass-title{
-		font-size: 13px;
+		font-size: 12px;
 	}
 	.pass-company{
 		display: none;
@@ -2039,10 +2039,10 @@ select:invalid{
 		font-size: 12px;
 	}
 	.pass-time{
-		font-size: 10px;
+		font-size: 12px;
 	}
 	.pass-time span{
-		font-size: 9px;
+		font-size: 12px;
 	}
 	.pass-car{
 	    width: 35px;
@@ -2447,11 +2447,11 @@ select:invalid{
 	    width:90%;
 	}
 	.small-img-box .pass-title {
-	    font-size: 9px;
+	    font-size: 12px;
 	}
 	.small-img-box .pass-company{
 		display: block;
-		font-size: 9px;
+		font-size: 12px;
 		margin-bottom: 10px;
 	}
 	.small-img-box .pass-number {
@@ -2459,17 +2459,17 @@ select:invalid{
 	}
 	.small-img-box .pass-name{
 		display: block;
-		font-size: 10px;
+		font-size: 12px;
 	}
 	.small-img-box .pass-time {
-	    font-size: 9px;
+	    font-size: 12px;
 	}
 	.small-img-box .pass-car{
 		margin:0px 0px 5px;
 		width:30px;
 	}
 	.small-img-box .pass-money{
-		margin-top:75px;
+		margin-top:90px;
 		font-size: 12px;
 	}
 	.small-img-box .pass-logo {
