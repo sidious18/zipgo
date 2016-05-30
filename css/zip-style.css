@@ -123,6 +123,7 @@ html{
 	background-repeat: repeat-x;
 	background-size: 530px;
 	text-align: center;
+	min-height: 115px;
 }
 .welcome-map{
 	padding-top: 1%;
@@ -238,6 +239,8 @@ html{
 	background-size: 100% 100%;
 	width:80%;
 	margin:auto;
+	border-radius: 5px;
+	font-size: 15px !important;
 }
 .pass-left{
 	float:left;
@@ -249,13 +252,13 @@ html{
 	text-align: center;
 }
 .pass-title{
-	font-size: 18px;
+	font-size: 20px;
 	color:#1d5a3b;
 	margin:0px;
 }
 .pass-company{
 	color:  #fefefe;
-	font-size: 18px;
+	font-size: 20px;
 	margin-bottom:20px;
 }
 .pass-car{
@@ -263,7 +266,7 @@ html{
 	margin-bottom: 15px;
 }
 .pass-number{
-	font-size: 22px;
+	font-size: 20px;
 	color:#fff;
 	margin-bottom: 35px;
 }
@@ -274,11 +277,11 @@ html{
 }
 .pass-time{
 	margin:0px;
-	font-size:18px;
+	font-size:20px;
 	color:#fff;
 }
 .pass-time span{
-	font-size: 16px;
+	font-size: 20px;
 	color:  #1d5a3b;
 }
 .pass-logo{
@@ -286,9 +289,9 @@ html{
 }
 .pass-money{
 	color:  #fefefe;
-	font-size: 30px;
-	margin-top: 135px;
-	margin-bottom: 0px
+	margin-top: 153px;
+	margin-bottom: 0px;
+	font-size:20px;
 }
 .black-button{
 	padding:2% 16%;
@@ -667,6 +670,7 @@ select:invalid{
 	background: white url(../img/grey-circle.png) no-repeat 25px center;;
 	float: right;
 	margin: 0px;
+	border-bottom: 2px solid #ccc;
 }
 .ride-route{
 	padding:0px;
@@ -715,6 +719,9 @@ select:invalid{
 	right:0px;
 	text-align: right;
 	color:  #343434;
+	padding: 1px 4px;
+	border: 1px solid #ccc;
+	border-radius: 4px;
 }
 .route-to-text{
 	padding-right:85px;
@@ -778,12 +785,13 @@ select:invalid{
 }
 .tracking-route li:first-child{
 	width:4.5%;
+	margin:0px 0.8%;
 }
 .tracking-route li:first-child img{
 	width:100%;
 }
 .tracking-route li:last-child{
-	width:95.5%;
+	width:93.5%;
 	padding-left: 2%;
 }
 .tracking-confirmation li img{
@@ -1220,9 +1228,9 @@ select:invalid{
 	border:0px !important;
 }
 .map-button{
-	float: right;
-	margin: 2% 10%;
+	margin: 2% auto;
 	width: 30%;
+	text-align: center;
 }
 .map-button .black-button{
 	border-radius: 10px;
@@ -2051,13 +2059,15 @@ select:invalid{
 	.pass-img-box{
 		width: 85%;
     	margin: auto;
+    	max-width: 320px;
 	}
 	.black-button{
 		font-size:14px;
 	}
 	.welcome{
-		margin-top: 30px;
+		margin-top: 0px;
 	    background-size: 208px;
+	    min-height: 55px;
 	}
 	.ride-block{
 		width:100%;
@@ -2130,17 +2140,18 @@ select:invalid{
 	.bottom-button{
 		margin-bottom: 3%;
 		overflow:hidden;
+		text-align: center;
 	}
 	.bottom-button a{
-		float:left;
 		display: inline-block;
 		color:  #3b3b3b !important;
 		margin-top: 4%;
 	}
 	.bottom-button .black-button{
-		float:right;
 		font-size: 11px;
-		padding:4% 6%;
+		padding: 2% 4%;
+		display: inline-block;
+		margin-left: 2%;
 	}
 	.verify-successful img{
 		width:10%;
@@ -2717,7 +2728,6 @@ select:invalid{
 	}
 	.company-done a{
 		color:#B7B7B9 !important;
-		float:left;
 		padding-top: 10px;
 	}
 	.company-done{
@@ -2727,7 +2737,6 @@ select:invalid{
 	}
 	.company-done .black-button{
 		padding:10px 40px;
-		float:right;
 	}
 	.avatar-cell{
 		width:30%;
@@ -2799,9 +2808,13 @@ select:invalid{
 	.tracking-route{
 		margin:3% auto 0;
 	}
+	.tracking-route li{
+		vertical-align: middle;
+	}
 	.tracking-route li:last-child{
 		font-size: 11px;
-		padding-left: 3.8%;
+		padding-left: 1.8%;
+		padding-top: 3%;
 	}
 	.car-number{
 	    width: 60%;
@@ -2838,10 +2851,11 @@ select:invalid{
 	}
 	.left-tracking{
 		border-bottom:1px solid #cdcccc;
+		padding-bottom: 10px;
 	}
 	.bottom-link{
 		position: relative;
-		top:60px;
+		top:85px;
 	}
 	.top-link{
 		position: relative;
@@ -2879,11 +2893,13 @@ select:invalid{
 	.pass-now-future-link input{
 		margin:inherit;
 		display: inline-block;
-		float:right;
+		position: relative;
+		left: 50px;
 	}
 	.pass-now-future-link a{
-		float: left;
 		margin-top: 13%;
+		right: 100px;
+		position: relative;
 	}
 }
 .labelFrom {
