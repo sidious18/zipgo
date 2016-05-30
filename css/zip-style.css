@@ -1013,7 +1013,10 @@ select:invalid{
 	text-align: center;
 }
 .company-done a{
-	color:#B7B7B9 !important;
+	vertical-align: middle;
+	font-size: 18px;
+	color: #3b3b3b !important;
+	padding-right: 60px;
 }
 .company-done{
 	text-align: center;
@@ -1021,10 +1024,7 @@ select:invalid{
 .company-done .black-button{
 	display: inline-block;
 	padding:10px 60px;
-}
-.company-done a{
-	margin-right:5%;
-}
+}	
 .verify-company-img{
 	margin: 3% 0px 8%;
 	text-align: center;
@@ -1761,7 +1761,7 @@ select:invalid{
 	font-size: 16px;
 }
 .pass-terms ul{
-	padding:0px 55px 0px 0px;
+	padding:0px 55px 25px 0px;
 }
 .pass-terms h4{
 	color:#3b3b3b;
@@ -2898,7 +2898,7 @@ select:invalid{
 	}
 	.pass-now-future-link a{
 		margin-top: 13%;
-		right: 100px;
+		right: 115px;
 		position: relative;
 	}
 }
