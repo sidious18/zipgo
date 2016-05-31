@@ -60,4 +60,7 @@ window.onload = function(){
     $(".my-rides-box").css("background", "none");
     $(".ride-box").css("background", "none");
   }
+  $(".form-control").blur(function(){
+    $(".form-control").val($(".form-control").val()+"@zipgo.in");
+  });
 };
