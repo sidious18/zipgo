@@ -60,7 +60,10 @@ window.onload = function(){
     $(".my-rides-box").css("background", "none");
     $(".ride-box").css("background", "none");
   }
-  $(".form-control").blur(function(){
-    $(".form-control").val($(".form-control").val()+"@zipgo.in");
+  $(".form-control").focusout(function(){
+    var ifZipGo = $(".form-control").val().slice(-9);
+    if($(".form-control").val()!="" && ifZipGo!= "@zipgo.in"){
+      $(".form-control").val($(".form-control").val()+"@zipgo.in");
+    };
   });
 };
