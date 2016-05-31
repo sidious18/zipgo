@@ -534,6 +534,7 @@ select:invalid{
 	margin-bottom:40px;
 	float: none;
 	cursor: pointer;
+	border-radius: 5px;
 }
 .fb-signin span,
 .google-signin span{
@@ -552,6 +553,8 @@ select:invalid{
 .social-icon{
 	width: 79px;
 	height: 58px;
+	border-top-left-radius: 5px;
+	border-bottom-left-radius: 5px;
 }
 .default-avatar{
 	border-radius: 50%;
