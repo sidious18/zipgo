@@ -44,6 +44,23 @@ jQuery(document).ready(function($) {
   });
 });
 
+  function setSelectionRange(input, selectionStart, selectionEnd) {
+    if (input.setSelectionRange) {
+      input.focus();
+      input.setSelectionRange(selectionStart, selectionEnd);
+    }
+    else if (input.createTextRange) {
+      var range = input.createTextRange();
+      range.collapse(true);
+      range.moveEnd('character', selectionEnd);
+      range.moveStart('character', selectionStart);
+      range.select();
+    }
+  }
+  function setCaretToPos (input, pos) {
+    setSelectionRange(input, pos, pos);
+  };
+
 window.onload = function(){
   if ($(".my-rides-box .ride-box").length > 1){
     var position = "background-position: " + "7px " + $(".my-rides-box .ride-box:first-child").outerHeight(true)/2+"px; ";
@@ -60,10 +77,11 @@ window.onload = function(){
     $(".my-rides-box").css("background", "none");
     $(".ride-box").css("background", "none");
   }
-  $(".form-control").focusout(function(){
+  $(".form-control").click(function(){
     var ifZipGo = $(".form-control").val().slice(-9);
-    if($(".form-control").val()!="" && ifZipGo!= "@zipgo.in"){
+    if(ifZipGo!= "@zipgo.in"){
       $(".form-control").val($(".form-control").val()+"@zipgo.in");
+      setCaretToPos($(".form-control")[0], 0);
     };
   });
 };
